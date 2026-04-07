@@ -18,6 +18,21 @@ It may include:
 
 Session state should be easy to update and easy to discard once it is no longer relevant.
 
+In this repository, current session-continuity documents live in `state/`.
+
+Use `state/current.md` for:
+
+- the active objective
+- current priorities
+- open questions
+- immediate next actions
+
+Use `state/roadmap.md` for:
+
+- likely next improvements
+- ordered backlog items
+- medium-term direction
+
 ## History And Decisions
 
 History and decisions capture context that should remain useful after the current task or session ends.

@@ -20,6 +20,7 @@ Keep a clear separation between layers:
 - `docs/scaffolding/` defines the system
 - `docs/guide/` explains how to apply the system
 - `docs/examples/` shows concrete applications
+- `state/` captures current working context and near-term priorities
 - `history/decisions/` records durable rationale
 
 Do not collapse system definition and system application into the same document unless there is a strong reason to do so.
@@ -49,13 +50,14 @@ If a concept seems to fit multiple layers, state the ambiguity explicitly and pr
 When working in this repository, the agent should:
 
 1. Read relevant context files before making major edits
-2. Update existing files in place when possible
-3. Keep system definition, application guidance, and examples separate
-4. Preserve alignment across related documents
-5. Call out inconsistencies when they are discovered
-6. Distinguish between proposing, implementing, and documenting a change
-7. Avoid silently changing established meaning
-8. Consider both conceptual clarity and builder usability in every change
+2. Read `state/current.md` when resuming work from a clean session
+3. Update existing files in place when possible
+4. Keep system definition, application guidance, examples, and current state separate
+5. Preserve alignment across related documents
+6. Call out inconsistencies when they are discovered
+7. Distinguish between proposing, implementing, and documenting a change
+8. Avoid silently changing established meaning
+9. Consider both conceptual clarity and builder usability in every change
 
 ## Editing Rules
 

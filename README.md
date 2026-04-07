@@ -20,6 +20,7 @@ If you are a builder:
 If you are contributing to this repository:
 
 - Read [CONTRIBUTING.md](CONTRIBUTING.md)
+- Read [state/current.md](state/current.md) for the active frontier of work
 - Use [docs/scaffolding/00-overview.md](docs/scaffolding/00-overview.md) as the conceptual entry point
 - Treat [AGENTS.md](AGENTS.md) as the repo-specific operating contract for agent work
 
@@ -28,6 +29,7 @@ If you are contributing to this repository:
 - `docs/scaffolding/` defines the scaffold itself
 - `docs/guide/` explains how to apply the scaffold in a real project
 - `docs/examples/` shows concrete applications
+- `state/` captures current priorities, open questions, and near-term plans
 - `history/decisions/` records durable structural decisions
 - `AGENTS.md` defines how agents should work in this repository
 - `CONTRIBUTING.md` defines how humans and agents should evolve the repository
@@ -66,6 +68,7 @@ The repository now includes:
 - a layered system-definition section
 - builder-oriented guides
 - concrete examples
+- active state documents for clean-session resumption
 - contributor guidance
 - decision history for structural changes
 

@@ -17,6 +17,7 @@ Start by locating the correct layer for the change:
 - `docs/scaffolding/` for system definition
 - `docs/guide/` for application guidance
 - `docs/examples/` for concrete usage
+- `state/` for current priorities, open questions, and near-term work
 - `history/decisions/` for durable rationale
 
 If a proposed change does not clearly belong anywhere, that is a sign to clarify the concept before expanding it.
@@ -45,10 +46,12 @@ Use the following heuristic:
 ## Contributor Workflow
 
 1. Read the relevant files before changing them
-2. Make the smallest coherent change that advances the repository
-3. Update neighboring documents if the meaning or structure changed
-4. Add a decision record when the repository's structure or interpretation changes materially
-5. Review the result from both the builder and contributor perspective
+2. Read `state/current.md` if you are resuming repository work from a clean session
+3. Make the smallest coherent change that advances the repository
+4. Update neighboring documents if the meaning or structure changed
+5. Add a decision record when the repository's structure or interpretation changes materially
+6. Update `state/current.md` or `state/roadmap.md` if the active frontier changed
+7. Review the result from both the builder and contributor perspective
 
 ## Review Checklist
 
