@@ -66,6 +66,26 @@ It answers questions such as:
 
 Orchestration is not the same thing as a task or a role. It is the coordination logic around them.
 
+## Workflow Standards
+
+Workflow standards define project-level conventions for how work moves through a repository.
+
+They answer questions such as:
+
+- how commits should be structured
+- what branch or review conventions apply
+- how project documents should be updated
+- what repository hygiene expectations exist
+
+Workflow standards are not:
+
+- system architecture
+- task definitions
+- current state
+- durable decisions about why the system exists in its current form
+
+Workflow standards often interact with orchestration, but they are not the same thing. Orchestration coordinates work; workflow standards define repository-level conventions that shape how that work is recorded and reviewed.
+
 ## Session State
 
 Session state captures the current working focus, open questions, and active context needed to continue work coherently.
@@ -99,5 +119,6 @@ Use these tests when placement is unclear:
 - If it describes work to be done, it is probably a task
 - If it describes a reusable evaluation lens, it is probably a review type
 - If it coordinates sequence, routing, or escalation, it is probably orchestration
+- If it defines commit, branch, review-flow, or document-update conventions for a project, it is probably a workflow standard
 - If it describes what matters right now, it is probably session state
 - If it explains why a structural choice was made, it belongs in history or decisions

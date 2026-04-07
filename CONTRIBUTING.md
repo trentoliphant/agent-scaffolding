@@ -53,6 +53,27 @@ Use the following heuristic:
 6. Update `state/current.md` or `state/roadmap.md` if the active frontier changed
 7. Review the result from both the builder and contributor perspective
 
+## Repository Workflow Preferences
+
+This section captures workflow preferences specific to this repository.
+
+These are local conventions for working here. They are not the scaffold definition itself.
+
+### Commits
+
+- Prefer one commit per coherent repository change when practical
+- Use commit messages that describe the change in plain language
+- When helpful, use a short subject plus bullet points in the body
+- Avoid vague commit subjects such as `update`, `fix`, or `changes`
+- Avoid mixing unrelated documentation, structure, and template changes in one commit unless they form one clear decision or initiative step
+
+### Document Updates
+
+- When a durable interpretation changes, add or update a decision record
+- When the active frontier changes, update `state/current.md`
+- When a major initiative advances, update its plan file to show completed work, remaining work, and next step
+- Keep scaffold definition, guides, examples, reference materials, and state documents distinct
+
 ## Review Checklist
 
 Before considering a change complete, ask:
