@@ -73,3 +73,5 @@ Common triggers include:
 - work spanning multiple sessions
 - handoffs between planning, execution, and review
 - recurring design debates that need durable resolution
+
+If you already know you want a more document-structured workflow, use [starter-kit-adoption.md](starter-kit-adoption.md) for the next step up from this minimal path.

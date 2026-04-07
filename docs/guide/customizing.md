@@ -32,6 +32,7 @@ Common adaptations include:
 - adding review types such as security, compliance, or usability
 - adding a lightweight session-state file for multi-session work
 - creating examples that reflect the real workflow of a project
+- starting from the imported templates and trimming them down for local needs
 
 ## Changes That Need Extra Care
 

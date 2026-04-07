@@ -15,6 +15,7 @@ If you are a builder:
 
 - Read [docs/guide/start-here.md](docs/guide/start-here.md)
 - Then use [docs/guide/minimal-adoption.md](docs/guide/minimal-adoption.md)
+- Use [docs/guide/starter-kit-adoption.md](docs/guide/starter-kit-adoption.md) if you want to start from the imported starter-kit patterns
 - See [docs/examples/minimal/README.md](docs/examples/minimal/README.md) for a concrete small-scale example
 
 If you are contributing to this repository:
@@ -31,6 +32,7 @@ If you are contributing to this repository:
 - `docs/guide/` explains how to apply the scaffold in a real project
 - `docs/examples/` shows concrete applications
 - `docs/reference/` identifies working reference implementations and extraction sources that inform the scaffold
+- `templates/` provides copyable starter assets derived from reference material where appropriate
 - `state/` captures current priorities, open questions, and near-term plans
 - `history/decisions/` records durable structural decisions
 - `AGENTS.md` defines how agents should work in this repository
@@ -71,6 +73,7 @@ The repository now includes:
 - builder-oriented guides
 - concrete examples
 - a lightweight reference layer for working extraction sources
+- copyable starter templates derived from reference material
 - active state documents for clean-session resumption
 - contributor guidance
 - decision history for structural changes

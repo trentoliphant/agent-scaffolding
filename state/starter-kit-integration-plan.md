@@ -16,11 +16,15 @@ Use the `starter_kit` materials to make this repository more directly usable for
 
 ## Source Being Mapped
 
-This plan refers to the non-`v1` materials in:
+This plan now works from the local reference copy in:
+
+- `docs/reference/starter_kit/`
+
+The original external source remains:
 
 - `/Volumes/Home/Users/trentoliphant/Development/starter_kit`
 
-Those materials already define a concrete, opinionated project document system. The goal is not to import them blindly. The goal is to place each part in the correct layer of this repository.
+Those materials define a concrete, opinionated project document system. The goal is not to collapse that system into the scaffold. The goal is to place what we learn from it into the correct layer of this repository while preserving the reference source.
 
 ## Core Interpretation
 
@@ -33,6 +37,11 @@ That means:
 - illustrative material derived from it may appear in `docs/examples/`
 - its status as a real working source should be named in `docs/reference/`
 - copyable assets belong in a future `templates/` directory
+
+Operational rule:
+
+- keep the reference source intact in `docs/reference/`
+- create reduced examples only when simplification adds teaching value
 
 ## Integration Categories
 
@@ -85,8 +94,8 @@ Candidate source materials:
 
 Planned outputs in this repository:
 
-- `docs/reference/README.md`
-- `docs/examples/starter-kit/README.md`
+- `docs/reference/README.md` and `docs/reference/starter_kit/`
+- `docs/examples/structured-project-starter/README.md`
 - a mapping table from scaffold concepts to starter-kit files
 
 ### 4. Create copyable templates as reusable starter assets
@@ -145,9 +154,17 @@ Create the repository-level documents that explain how the starter kit fits into
 Deliverables:
 
 - `docs/reference/README.md`
+- `docs/reference/starter_kit/`
 - `docs/guide/starter-kit-adoption.md`
-- `docs/examples/starter-kit/README.md`
+- `docs/examples/structured-project-starter/README.md`
 - updates to `README.md` and relevant guide pages
+
+Current status:
+
+- `docs/reference/README.md` is complete
+- `docs/reference/starter_kit/` is complete
+- `docs/examples/structured-project-starter/README.md` is complete
+- `docs/guide/starter-kit-adoption.md` is complete
 
 ### Phase 2. Import the minimal reusable template set
 
@@ -163,6 +180,10 @@ Priority templates:
 6. `step_review`
 7. `coding_standards`
 8. `workflow_standards`
+
+Current status:
+
+- `templates/core/` now contains this initial minimal template set
 
 ### Phase 3. Import advanced modes
 
@@ -198,8 +219,8 @@ When the repository commits to a template strategy or to the starter kit as a ca
 
 The best next implementation step is:
 
-1. add `docs/guide/starter-kit-adoption.md`
-2. add `docs/examples/starter-kit/README.md`
-3. create `templates/core/` with a minimal imported template set
+1. decide whether to import periodic review, AI-team, and experiment templates next
+2. review the imported core templates for terminology alignment
+3. record any durable template-strategy decision in `history/decisions/`
 
 That sequence gives builders immediate value while keeping the repository architecture clean.

@@ -18,6 +18,7 @@ The repository now has:
 - concrete examples in `docs/examples/`
 - a lightweight reference layer in `docs/reference/`
 - a local reference copy of `starter_kit` plus a reduced derived example
+- an initial `templates/core/` starter set imported from the reference source
 - contributor workflow guidance in `CONTRIBUTING.md`
 - structural decision records in `history/decisions/`
 
@@ -44,8 +45,8 @@ The main unresolved questions currently are:
 
 The most reasonable next work items are:
 
-1. execute [starter-kit-integration-plan.md](starter-kit-integration-plan.md)
-2. decide which parts of the local `starter_kit` reference should become first-class templates
+1. decide whether to import periodic review, AI-team, and experiment templates next
+2. review whether the imported core templates need renaming or adaptation to fit this repo's terminology more cleanly
 3. add another decision record when a substantive interpretation or scope choice is made
 
 ## Known Constraints

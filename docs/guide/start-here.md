@@ -8,8 +8,9 @@ Do not start by copying every concept at once. Start with the smallest version t
 
 1. Read [../scaffolding/00-overview.md](../scaffolding/00-overview.md) to understand the major parts of the scaffold.
 2. Use [minimal-adoption.md](minimal-adoption.md) to create a first working version in your own project.
-3. Use [customizing.md](customizing.md) to adapt the scaffold without collapsing important distinctions.
-4. Review [../examples/minimal/README.md](../examples/minimal/README.md) before adding more structure.
+3. Use [starter-kit-adoption.md](starter-kit-adoption.md) if you want a richer starting point based on the imported starter-kit patterns.
+4. Use [customizing.md](customizing.md) to adapt the scaffold without collapsing important distinctions.
+5. Review [../examples/minimal/README.md](../examples/minimal/README.md) before adding more structure.
 
 If you want the fastest possible start, copy the shape from [../examples/minimal/README.md](../examples/minimal/README.md), rename the roles for your project, and only add more files after a real workflow exposes a need.
 
