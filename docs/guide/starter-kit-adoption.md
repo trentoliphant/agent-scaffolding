@@ -28,6 +28,11 @@ Use the imported templates when you need:
 - copyable starter assets for a real project
 - a shorter path from scaffold understanding to practical adoption
 
+One terminology note:
+
+- the current `templates/core/` set does not include a dedicated operating-model template
+- when a project needs explicit execution-governance documentation, use the reference source as the current pattern source
+
 ## Current Sources
 
 - Full reference source: [../reference/starter_kit](../reference/starter_kit)
@@ -68,10 +73,23 @@ The current imported template set is:
 - `templates/core/history.template.md`
 - `templates/core/step_spec.template.md`
 - `templates/core/step_review.template.md`
+- `templates/core/periodic_review.template.md`
 - `templates/core/coding_standards.template.md`
 - `templates/core/workflow_standards.template.md`
 
 This set is intentionally smaller than the full reference source.
+
+At this stage:
+
+- the current imported starter set is the default builder path
+- periodic review is included as part of the base starter set
+- AI-team templates remain deferred as an advanced extension
+- experiment templates remain deferred as a specialized extension
+- explicit operating-model material remains reference-sourced rather than part of the imported core template set
+
+This is a deliberate decision, not just an implementation gap. See [../../history/decisions/0003-ai-team-templates-remain-advanced.md](../../history/decisions/0003-ai-team-templates-remain-advanced.md).
+The same is true for experiment templates. See [../../history/decisions/0004-experiment-templates-remain-specialized.md](../../history/decisions/0004-experiment-templates-remain-specialized.md).
+The current base set being sufficient as the default path is also deliberate. See [../../history/decisions/0005-current-starter-set-is-the-default-builder-path.md](../../history/decisions/0005-current-starter-set-is-the-default-builder-path.md).
 
 ## Adoption Rule
 

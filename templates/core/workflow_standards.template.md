@@ -14,7 +14,7 @@ It does not define:
 
 Architecture is defined in `SYSTEM_MODEL.md`.
 Coding conventions are defined in `CODING_STANDARDS.md`.
-Execution governance is defined in `OPERATING_MODEL.md`.
+Execution governance is defined in the project's operating model or equivalent orchestration/workflow document.
 
 ---
 
@@ -158,7 +158,7 @@ Use this section only if the project uses PRs or equivalent review flow.
 - PRs must note any changes to shared truth documents:
   - `SYSTEM_MODEL.md`
   - `PLAN.md`
-  - `OPERATING_MODEL.md`
+  - operating model or equivalent execution-governance document
   - templates
 
 ### Preferred

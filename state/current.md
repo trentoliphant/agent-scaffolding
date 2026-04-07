@@ -19,9 +19,10 @@ Make the repository strong as both:
 
 ## Active Initiative
 
-- active initiative: starter-kit integration
-- initiative plan: [starter-kit-integration-plan.md](starter-kit-integration-plan.md)
-- current focus: decide how far to expand imported templates beyond the initial `templates/core/` set
+- active initiative: none
+- most recently completed initiative: starter-kit integration
+- completed initiative record: [starter-kit-integration-plan.md](starter-kit-integration-plan.md)
+- current focus: maintain the established baseline and only expand it when a concrete builder need appears
 
 ## Current Status
 
@@ -33,6 +34,10 @@ The repository now has:
 - a lightweight reference layer in `docs/reference/`
 - a local reference copy of `starter_kit` plus a reduced derived example
 - an initial `templates/core/` starter set imported from the reference source
+- `periodic_review.template.md` added to the base core template set
+- AI-team templates explicitly kept as an advanced extension
+- experiment templates explicitly kept as a specialized extension
+- the current imported starter set explicitly treated as the default builder path
 - contributor workflow guidance in `CONTRIBUTING.md`
 - structural decision records in `history/decisions/`
 
@@ -42,16 +47,16 @@ This means the repository is no longer only conceptual. It is usable as a starti
 
 The next task to work on is:
 
-1. decide whether to import periodic review, AI-team, and experiment templates next
+1. shift active attention from starter-kit integration to the next meaningful repository refinement when one is identified
 
-That decision should be made by reviewing the current starter-kit integration plan and comparing the builder value of each optional template group against the goal of keeping the minimal path small.
+Until a concrete new need appears, the current starter set should be treated as the stable baseline and the integration work should be treated as complete.
 
 ## Active Priorities
 
 The next useful improvements are:
 
-1. integrate the external starter kit into this scaffold cleanly
-2. make builder adoption even more direct
+1. maintain the current starter baseline unless a stronger builder need appears
+2. make builder adoption even more direct where gaps are discovered
 3. keep contributor refinement disciplined as the system grows
 
 ## Open Questions
@@ -59,7 +64,7 @@ The next useful improvements are:
 The main unresolved questions currently are:
 
 1. Which starter-kit materials should become templates here versus remain example material?
-2. What is the minimal copyable template set that gives builders immediate value?
+2. What concrete future builder need, if any, would justify expanding the default starter set?
 3. Which parts of `starter_kit` should be treated as reference material only, rather than imported?
 4. How much orchestration detail belongs in the base scaffold versus project-specific customization?
 
@@ -67,9 +72,9 @@ The main unresolved questions currently are:
 
 The most reasonable next work items are:
 
-1. decide whether to import periodic review, AI-team, and experiment templates next
-2. review whether the imported core templates need renaming or adaptation to fit this repo's terminology more cleanly
-3. add another decision record when a substantive interpretation or scope choice is made
+1. treat the current imported starter set as the stable default path unless a stronger builder need appears
+2. record any later change to that baseline as a deliberate decision
+3. identify the next repository refinement thread only when there is a concrete problem to solve
 
 ## Known Constraints
 

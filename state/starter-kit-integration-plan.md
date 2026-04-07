@@ -6,9 +6,9 @@ It is an execution plan for repository evolution, not part of the scaffold defin
 
 ## Status
 
-- overall status: in progress
-- current phase: Phase 3 and Phase 4
-- current focus: decide whether to import optional template sets next and review terminology alignment of the imported core templates
+- overall status: baseline established
+- current phase: complete
+- current focus: no active implementation work; future expansion is demand-driven
 
 ## Completed
 
@@ -20,23 +20,25 @@ The following work is complete for this initiative:
 - reduced derived example added at `docs/examples/structured-project-starter/README.md`
 - `docs/guide/starter-kit-adoption.md` created
 - initial `templates/core/` set imported
+- `templates/core/periodic_review.template.md` added to the base starter set
+- imported core template wording aligned so execution-governance references do not depend on a missing `OPERATING_MODEL.md` template
+- decision recorded that AI-team templates remain an advanced extension
+- decision recorded that experiment templates remain a specialized extension
+- decision recorded that the current imported starter set is sufficient as the default builder path
 - repository entry points and state docs updated to reflect the new reference/example/template structure
 
 ## Remaining Work
 
 The main work still remaining in this initiative is:
 
-- decide whether to import periodic review templates
-- decide whether to import AI-team templates
-- decide whether to import experiment templates
-- review imported core templates for terminology alignment with this repository
-- record any durable template-strategy decision in `history/decisions/`
+- no active implementation work remains
+- future expansion should happen only if a later builder need justifies it
 
 ## Next Step
 
 The immediate next step is:
 
-1. decide whether to import periodic review, AI-team, and experiment templates next
+1. treat the current imported starter set as the stable default path and reopen this initiative only if a later builder need clearly justifies doing so
 
 Use this decision rule:
 
@@ -221,7 +223,7 @@ Priority templates:
 
 Current status:
 
-- `templates/core/` now contains this initial minimal template set
+- `templates/core/` now contains this initial minimal template set plus `periodic_review.template.md`
 
 ### Phase 3. Import advanced modes
 
@@ -235,8 +237,10 @@ These should remain clearly optional.
 
 Current status:
 
-- not yet started
-- pending a decision about whether each optional template group materially improves builder adoption
+- partially resolved
+- `periodic_review.template.md` has been promoted into the base starter set
+- AI-team templates remain an advanced extension
+- experiment templates remain a specialized extension
 
 ### Phase 4. Reconcile terminology and structure
 
@@ -249,11 +253,17 @@ After import, review whether:
 Current status:
 
 - partially started
-- initial imported core templates still need a terminology-alignment review
+- initial imported core templates have received a first terminology-alignment pass
+- further terminology changes should be made only if they materially improve builder understanding
 
 ### Phase 5. Record durable choices
 
 When the repository commits to a template strategy or to the starter kit as a canonical example, record that in `history/decisions/`.
+
+Current status:
+
+- complete for the current baseline
+- future decisions should be added only if the baseline is intentionally changed
 
 ## Constraints
 
@@ -263,12 +273,13 @@ When the repository commits to a template strategy or to the starter kit as a ca
 - Keep the minimal path small even if advanced modes are available
 - Preserve the distinction between current state, durable decisions, and scaffold definition
 
-## Immediate Recommendation
+## Closing State
 
-The best next implementation step is:
+This initiative has established a stable baseline:
 
-1. decide whether to import periodic review, AI-team, and experiment templates next
-2. review the imported core templates for terminology alignment
-3. record any durable template-strategy decision in `history/decisions/`
+- the current imported starter set is the default builder path
+- AI-team templates remain an advanced extension
+- experiment templates remain a specialized extension
+- fuller material remains available in the reference layer
 
-That sequence gives builders immediate value while keeping the repository architecture clean.
+Further work in this area should be treated as a new change thread triggered by concrete builder needs rather than by a goal of fuller parity with the reference source.

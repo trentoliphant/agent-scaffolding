@@ -9,7 +9,7 @@ It does not define system architecture, project sequencing, or workflow
 governance.
 
 Architecture is defined in `SYSTEM_MODEL.md`.
-Process and execution rules are defined in `OPERATING_MODEL.md`.
+Process and execution rules are defined in the project's operating model or equivalent orchestration/workflow document.
 
 ---
 
