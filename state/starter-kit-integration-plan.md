@@ -4,6 +4,44 @@ This document defines how the external `starter_kit` materials should relate to 
 
 It is an execution plan for repository evolution, not part of the scaffold definition itself.
 
+## Status
+
+- overall status: in progress
+- current phase: Phase 3 and Phase 4
+- current focus: decide whether to import optional template sets next and review terminology alignment of the imported core templates
+
+## Completed
+
+The following work is complete for this initiative:
+
+- decision record added for reference implementations and extraction sources
+- `docs/reference/README.md` created
+- local reference copy added at `docs/reference/starter_kit/`
+- reduced derived example added at `docs/examples/structured-project-starter/README.md`
+- `docs/guide/starter-kit-adoption.md` created
+- initial `templates/core/` set imported
+- repository entry points and state docs updated to reflect the new reference/example/template structure
+
+## Remaining Work
+
+The main work still remaining in this initiative is:
+
+- decide whether to import periodic review templates
+- decide whether to import AI-team templates
+- decide whether to import experiment templates
+- review imported core templates for terminology alignment with this repository
+- record any durable template-strategy decision in `history/decisions/`
+
+## Next Step
+
+The immediate next step is:
+
+1. decide whether to import periodic review, AI-team, and experiment templates next
+
+Use this decision rule:
+
+- import an optional template group only if it materially improves builder adoption without making the minimal path confusing or heavy
+
 ## Goal
 
 Use the `starter_kit` materials to make this repository more directly usable for builders without collapsing the distinction between:
@@ -195,6 +233,11 @@ Add optional templates and examples for:
 
 These should remain clearly optional.
 
+Current status:
+
+- not yet started
+- pending a decision about whether each optional template group materially improves builder adoption
+
 ### Phase 4. Reconcile terminology and structure
 
 After import, review whether:
@@ -202,6 +245,11 @@ After import, review whether:
 - this repository's concepts and the template names align cleanly
 - any starter-kit terms should be generalized
 - any guide pages need cross-links or clarifications
+
+Current status:
+
+- partially started
+- initial imported core templates still need a terminology-alignment review
 
 ### Phase 5. Record durable choices
 

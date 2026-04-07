@@ -2,12 +2,26 @@
 
 This document captures the active frontier of work for this repository so a new session can resume without reconstructing recent intent from chat history.
 
+## Start Here
+
+If you are resuming work in a clean session, start in this order:
+
+1. Read [starter-kit-integration-plan.md](starter-kit-integration-plan.md).
+2. Focus first on the `Current Phase`, `Remaining Work`, and `Next Step` sections in that plan.
+3. Use this file to confirm repository-level priorities, open questions, and constraints.
+
 ## Current Objective
 
 Make the repository strong as both:
 
 - the source of truth for the scaffold itself
 - a practical starting point for builders adopting that scaffold
+
+## Active Initiative
+
+- active initiative: starter-kit integration
+- initiative plan: [starter-kit-integration-plan.md](starter-kit-integration-plan.md)
+- current focus: decide how far to expand imported templates beyond the initial `templates/core/` set
 
 ## Current Status
 
@@ -23,6 +37,14 @@ The repository now has:
 - structural decision records in `history/decisions/`
 
 This means the repository is no longer only conceptual. It is usable as a starting point, but it is still early-stage.
+
+## Immediate Task
+
+The next task to work on is:
+
+1. decide whether to import periodic review, AI-team, and experiment templates next
+
+That decision should be made by reviewing the current starter-kit integration plan and comparing the builder value of each optional template group against the goal of keeping the minimal path small.
 
 ## Active Priorities
 
