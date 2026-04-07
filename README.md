@@ -7,7 +7,7 @@ This repository serves two audiences:
 - Builders who want a practical basis for their own agent-assisted system
 - Contributors who want to refine the scaffold itself
 
-The repository is organized so those audiences can take different paths without mixing system definition, usage guidance, and concrete applications.
+The repository is organized so those audiences can take different paths without mixing system definition, usage guidance, concrete applications, reference implementations, and current development state.
 
 ## Start Here
 
@@ -22,6 +22,7 @@ If you are contributing to this repository:
 - Read [CONTRIBUTING.md](CONTRIBUTING.md)
 - Read [state/current.md](state/current.md) for the active frontier of work
 - Use [docs/scaffolding/00-overview.md](docs/scaffolding/00-overview.md) as the conceptual entry point
+- Use [docs/reference/README.md](docs/reference/README.md) when you need to understand external reference implementations and extraction sources
 - Treat [AGENTS.md](AGENTS.md) as the repo-specific operating contract for agent work
 
 ## Repository Map
@@ -29,6 +30,7 @@ If you are contributing to this repository:
 - `docs/scaffolding/` defines the scaffold itself
 - `docs/guide/` explains how to apply the scaffold in a real project
 - `docs/examples/` shows concrete applications
+- `docs/reference/` identifies working reference implementations and extraction sources that inform the scaffold
 - `state/` captures current priorities, open questions, and near-term plans
 - `history/decisions/` records durable structural decisions
 - `AGENTS.md` defines how agents should work in this repository
@@ -68,6 +70,7 @@ The repository now includes:
 - a layered system-definition section
 - builder-oriented guides
 - concrete examples
+- a lightweight reference layer for working extraction sources
 - active state documents for clean-session resumption
 - contributor guidance
 - decision history for structural changes

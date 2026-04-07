@@ -16,8 +16,9 @@ The repository now has:
 - a layered definition of the scaffold in `docs/scaffolding/`
 - builder-facing adoption guidance in `docs/guide/`
 - concrete examples in `docs/examples/`
+- a lightweight reference layer in `docs/reference/`
 - contributor workflow guidance in `CONTRIBUTING.md`
-- one structural decision record in `history/decisions/`
+- structural decision records in `history/decisions/`
 
 This means the repository is no longer only conceptual. It is usable as a starting point, but it is still early-stage.
 
@@ -25,7 +26,7 @@ This means the repository is no longer only conceptual. It is usable as a starti
 
 The next useful improvements are:
 
-1. strengthen clean-session continuity
+1. integrate the external starter kit into this scaffold cleanly
 2. make builder adoption even more direct
 3. keep contributor refinement disciplined as the system grows
 
@@ -33,17 +34,17 @@ The next useful improvements are:
 
 The main unresolved questions currently are:
 
-1. Should the repository include copyable template files or a template directory for builders?
-2. Should session state remain simple Markdown, or eventually gain a more structured format?
-3. What is the minimum example set needed before the scaffold feels concretely applicable?
+1. Which starter-kit materials should become templates here versus remain example material?
+2. What is the minimal copyable template set that gives builders immediate value?
+3. Which parts of `starter_kit` should be treated as reference material only, rather than imported?
 4. How much orchestration detail belongs in the base scaffold versus project-specific customization?
 
 ## Immediate Next Actions
 
 The most reasonable next work items are:
 
-1. add a builder-ready template or starter layout that can be copied into another repository
-2. expand examples so at least one shows a slightly more realistic working flow, not just structure
+1. execute [starter-kit-integration-plan.md](starter-kit-integration-plan.md)
+2. add a builder-ready template or starter layout that can be copied into another repository
 3. add another decision record when a substantive interpretation or scope choice is made
 
 ## Known Constraints

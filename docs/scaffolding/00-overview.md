@@ -2,7 +2,7 @@
 
 This section defines the scaffolding system itself.
 
-It describes the conceptual parts of the system and the boundaries between them. It does not try to teach adoption step by step and it does not serve as a project-specific example.
+It describes the conceptual parts of the system and the boundaries between them. It does not try to teach adoption step by step, it does not serve as a project-specific example, and it does not directly document external reference implementations.
 
 ## Purpose
 
@@ -32,13 +32,18 @@ These components are related but not interchangeable.
 
 ## Layer Map
 
-This repository separates three kinds of documentation:
+This repository separates four kinds of durable documentation plus current-state material:
 
 - `docs/scaffolding/` for system definition
 - `docs/guide/` for how to apply the system
 - `docs/examples/` for concrete applications
+- `docs/reference/` for working reference implementations and extraction sources
 
-That separation matters because a system can be well-defined but hard to use, or easy to imitate but conceptually unclear. Both concerns need their own documentation.
+In addition:
+
+- `state/` for the current development frontier of this repository
+
+That separation matters because a system can be well-defined but hard to use, easy to imitate but conceptually unclear, or strongly influenced by real working systems whose instance-level documents should not be mistaken for the scaffold itself.
 
 ## Reading Paths
 
@@ -52,7 +57,9 @@ If you are a contributor:
 
 - read this section in order
 - use [../../CONTRIBUTING.md](../../CONTRIBUTING.md) for repository workflow
+- use [../reference/README.md](../reference/README.md) when a real working system is relevant to scaffold refinement
 - consult [../../history/decisions/0001-repository-structure.md](../../history/decisions/0001-repository-structure.md) for the current structural rationale
+- consult [../../history/decisions/0002-reference-implementations-and-extraction-sources.md](../../history/decisions/0002-reference-implementations-and-extraction-sources.md) for how reference implementations relate to the scaffold
 
 ## What Good Scaffolding Should Achieve
 

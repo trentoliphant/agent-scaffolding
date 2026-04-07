@@ -6,10 +6,11 @@ It is a planning aid, not a durable definition of the scaffold. Items here may c
 
 ## Near Term
 
-1. Add a copyable starter template for builders
-2. Expand examples to show a more complete workflow
-3. Add more decision records as interpretation and scope choices are made
-4. Improve cross-linking between guides, examples, and scaffold definitions
+1. Integrate the external starter kit through guide, example, and template layers
+2. Add a copyable starter template for builders
+3. Expand examples to show a more complete workflow
+4. Add more decision records as interpretation and scope choices are made
+5. Improve cross-linking between guides, examples, and scaffold definitions
 
 ## Medium Term
 
