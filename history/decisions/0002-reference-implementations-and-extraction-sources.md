@@ -47,6 +47,7 @@ Boundary consequences:
 
 - instance-level documents still require generalization before entering `docs/scaffolding/`
 - examples in this repository remain distinct from external reference implementations
+- examples derived from reference implementations should be reduced and teaching-oriented, not mirrors of the source
 - guide and template work can draw from reference implementations without collapsing the layers
 
 Tradeoff:

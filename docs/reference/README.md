@@ -12,6 +12,8 @@ Use this section to capture sources that are relevant because they are:
 - evidence of how the scaffold works in practice
 - sources from which reusable scaffold patterns may be extracted
 
+When practical, keep reference sources intact enough to preserve their value as working systems and extraction inputs.
+
 ## Relationship To Other Layers
 
 Keep these distinctions explicit:
@@ -23,13 +25,16 @@ Keep these distinctions explicit:
 
 Reference implementations may influence scaffold refinement, but their instance-level documents should not be copied into scaffold definitions without generalization.
 
+Examples derived from reference implementations belong in `docs/examples/` only when a reduced, teaching-oriented version materially improves understanding.
+
 ## Current Reference Source
 
 ### `starter_kit`
 
 Location:
 
-- `/Volumes/Home/Users/trentoliphant/Development/starter_kit`
+- local reference copy: `docs/reference/starter_kit/`
+- external source: `/Volumes/Home/Users/trentoliphant/Development/starter_kit`
 
 Current interpretation:
 
@@ -42,13 +47,19 @@ This means it should not be treated as only:
 - a downstream example
 - the scaffold itself
 
+Derived example:
+
+- [../examples/structured-project-starter/README.md](../examples/structured-project-starter/README.md)
+
 ## Usage Rule
 
 When using a reference implementation to refine the scaffold:
 
 1. identify the reusable pattern
-2. decide whether it belongs in scaffold definition, guide material, examples, or templates
-3. preserve the distinction between generalized concepts and instance-level documents
+2. preserve the reference source in `docs/reference/` as-is or close to as-is
+3. decide whether it belongs in scaffold definition, guide material, examples, or templates
+4. create a simplified example only if that simplification adds teaching value
+5. preserve the distinction between generalized concepts and instance-level documents
 
 ## Current Note
 

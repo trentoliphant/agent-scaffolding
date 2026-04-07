@@ -17,6 +17,7 @@ The repository now has:
 - builder-facing adoption guidance in `docs/guide/`
 - concrete examples in `docs/examples/`
 - a lightweight reference layer in `docs/reference/`
+- a local reference copy of `starter_kit` plus a reduced derived example
 - contributor workflow guidance in `CONTRIBUTING.md`
 - structural decision records in `history/decisions/`
 
@@ -44,7 +45,7 @@ The main unresolved questions currently are:
 The most reasonable next work items are:
 
 1. execute [starter-kit-integration-plan.md](starter-kit-integration-plan.md)
-2. add a builder-ready template or starter layout that can be copied into another repository
+2. decide which parts of the local `starter_kit` reference should become first-class templates
 3. add another decision record when a substantive interpretation or scope choice is made
 
 ## Known Constraints
