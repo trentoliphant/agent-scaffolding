@@ -1,8 +1,11 @@
 # Structured Project Starter
 
-This example is a reduced, teaching-oriented version of the patterns visible in the `starter_kit` reference implementation.
+This example is a reduced, teaching-oriented version of the patterns visible in
+the `starter_kit` reference implementation.
 
-It is not a full copy of the reference source. It exists to show the smallest project shape that still demonstrates the step-driven, document-structured workflow clearly.
+It is not a full copy of the reference source. It exists to show one richer,
+document-structured implementation pattern that informed earlier phases of this
+repository.
 
 ## Derived From
 
@@ -15,8 +18,11 @@ Use this example when you want to understand the pattern of:
 - a process document defining execution rules
 - a small set of project truth documents
 - step-by-step execution contracts
-- explicit review documents
+- explicit verification or review documents
 - tracked progress and preserved history
+
+This example is best treated as a reference-shaped implementation example, not
+as the default baseline for the current standard.
 
 ## Minimal Example Shape
 
@@ -61,6 +67,7 @@ Use this example when you need:
 - the smallest understandable illustration of that pattern
 - a builder-facing explanation of the workflow shape
 - a less opinionated teaching artifact
+- a migration aid from older coding-oriented scaffold material
 
 ## Key Mapping
 
@@ -70,4 +77,4 @@ Use this example when you need:
 - `docs/PROGRESS.md` shows current state
 - `docs/HISTORY.md` shows preserved learning
 - `steps/step_1.1_spec.md` shows the unit-of-work contract
-- `reviews/STEP_REVIEW.md` shows structured review as a separate concern
+- `reviews/STEP_REVIEW.md` shows verification or review as a separate concern

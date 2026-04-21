@@ -1,5 +1,10 @@
 # WORKFLOW STANDARDS
 
+> Status: Transitional
+> Alignment: Partially aligned with the open-standard rewrite
+> Intended role: optional implementation-specific template for repository workflow conventions
+> Use it for: baseline implementation workflow, not as standard core
+
 ## Purpose
 
 This document defines workflow and repository practices for the project.

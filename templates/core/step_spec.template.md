@@ -1,4 +1,4 @@
-# Step X.Y — [Title]
+# Task Or Step X.Y — [Title]
 
 **Phase:** X — [Phase Name]  
 **Component:** `[component]`
@@ -7,15 +7,15 @@
 
 ## Objective
 
-Describe the purpose of this step in one or two sentences.
+Describe the purpose of this task or step in one or two sentences.
 
-What capability does this step add?
+What capability or decision does this task or step add?
 
 ---
 
 ## Dependencies
 
-List prior steps or conditions that must already be complete.
+List prior tasks, steps, or conditions that must already be complete.
 
 - Step X.Y Done
 - Required interfaces available
@@ -27,9 +27,9 @@ List prior steps or conditions that must already be complete.
 
 ### In Scope
 
-- Specific functionality to implement
-- Components affected
-- Responsibilities of this step
+- Specific work to perform
+- Components, artifacts, or decisions affected
+- Responsibilities of this task or step
 
 ### Out of Scope
 
@@ -43,39 +43,69 @@ List prior steps or conditions that must already be complete.
 
 What already exists and can be relied on:
 
-- Existing modules or interfaces
-- Prior completed steps
-- Data structures or APIs available
+- Existing modules, artifacts, or interfaces
+- Prior completed tasks or steps
+- Available sources, state, or constraints
 
 ---
 
 ## Outputs
 
-What must exist after this step:
+What must exist after this task or step:
 
-- New classes, functions, or modules
-- Schema changes (if any)
-- Commands or interfaces (if applicable)
+- New artifacts, outputs, or decisions
+- Schema or state changes (if any)
+- Commands, interfaces, or documented outcomes (if applicable)
 
 ---
 
-## Implementation Details
+## Execution Details
 
 Provide necessary specifics:
 
-- Required interfaces or signatures
-- Core behavior
+- Required interfaces, inputs, or outputs
+- Core behavior or judgment to apply
 - Important constraints
 
 Avoid:
-- Over-specifying internal structure
+- Over-specifying internal mechanics
 - Repeating global architecture
 
 ---
 
-## Implementation Notes
+## Role And Assignment Notes
 
-Execution boundaries for this step:
+State any important expectations about who or what may perform this work:
+
+- Required role
+- Allowed actor type: human, machine, or mixed
+- Required escalation points
+
+---
+
+## Verification Requirements
+
+Define how this work will be verified:
+
+- Verification contract used
+- Required verifier role or function
+- Possible blocking conditions
+
+---
+
+## Trace Requirements
+
+Define the minimum trace expected from this task cycle:
+
+- key observations to preserve
+- outcome fields to record
+- failure or escalation fields to preserve
+
+---
+
+## Execution Notes
+
+Execution boundaries for this task or step:
 
 - What should remain standalone
 - What must not be integrated yet
@@ -95,30 +125,29 @@ Only include what applies:
 
 ## Acceptance Criteria
 
-The step is complete when:
+The task or step is complete when:
 
-1. Behavior works as specified
-2. Edge cases handled where relevant
+1. The intended outcome is produced
+2. Relevant edge cases or failure conditions are handled where relevant
 3. Outputs match expectations
-4. No architectural violations
+4. No boundary or architecture violations were introduced
 
 ---
 
-## Testing Requirements
+## Validation Requirements
 
-- Unit tests for:
-  - Core behavior
-  - Edge cases
-- Integration points (if applicable)
+- Tests, checks, or reviews required
+- Evidence expected for completion
+- Integration points to confirm where applicable
 
 ---
 
 ## Completion Criteria
 
 - All acceptance criteria met
-- Tests pass
-- No placeholder logic remains
-- Code integrates cleanly
+- Required verification completed
+- Required trace recorded
+- No placeholder logic or unresolved blocking issue remains
 
 ---
 
@@ -137,4 +166,4 @@ Optional:
 
 - Clarifications
 - Non-obvious decisions
-- References to related steps
+- References to related tasks or steps

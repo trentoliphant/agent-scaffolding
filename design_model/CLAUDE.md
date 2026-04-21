@@ -1,5 +1,10 @@
 # CLAUDE.md — AI Execution Instructions for [Project Name]
 
+> Status: Incubating
+> Alignment: Not yet aligned with the current open-standard rewrite
+> Intended role: earlier design-domain adapter material
+> Use it for: reference or future integration work, not as current standard core
+
 This file is read automatically by Claude Code at the start of every session.
 It resolves conflicts and ambiguities across framework documents and defines
 how AI agents should behave in this design project.

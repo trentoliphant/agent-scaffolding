@@ -1,8 +1,9 @@
 # Principles
 
-These principles apply across the scaffold.
+These principles apply across the standard.
 
-They are not steps in a workflow. They are durable constraints and preferences that shape how the scaffold should be interpreted and evolved.
+They are not workflow steps. They are durable constraints and interpretive
+rules that shape how the standard should be understood, extended, and revised.
 
 ## 1. Separate Layers
 
@@ -10,72 +11,111 @@ Do not collapse distinct layers into one another when the distinction matters.
 
 Important distinctions include:
 
-- system definition vs system application
+- standard definition vs implementation guidance
+- open standard vs baseline implementation vs domain implementation
 - roles vs tasks
-- execution vs review
-- current state vs historical reasoning
-- orchestration vs implementation details
-- facts vs interpretations vs asserted outputs
+- execution vs verification
+- session state vs traces vs historical rationale
+- observed outcomes vs interpretations vs adopted changes
 
-## 2. Iteration Over Replacement
+## 2. Modularity Before Completeness
 
-The scaffold is expected to evolve.
+The standard should define composable modules rather than one monolithic
+process.
 
-Prefer revising and extending existing structure over repeatedly replacing it. Replacement is justified when the existing structure no longer preserves meaning clearly.
+Add a concept to the core only when it is reusable across domains and improves:
 
-## 3. Structure Before Expansion
+- inspectability
+- interoperability
+- safety
+- scaffold evolution
 
-When a new idea appears, first determine what kind of thing it is.
+## 3. Model And Runtime Agnosticism
 
-Ask:
+The standard should not depend on one model family or one execution engine.
 
-- Is it a principle?
-- Is it a role?
-- Is it a task pattern?
-- Is it a review type?
-- Is it orchestration logic?
-- Is it session state?
-- Is it historical rationale?
+It may describe integration points and common expectations, but those
+integration details should not become the core definition.
 
-Expansion without placement produces confusion quickly.
+## 4. Human And Machine Composability
 
-## 4. Human Legibility Matters
+Roles should be defined by responsibility and boundaries, not by whether a
+human or machine performs them.
 
-The scaffold must remain understandable to a thoughtful human reader.
+The same structural role may be filled by:
+
+- a human
+- a machine
+- a human-supervised machine
+- a machine-assisted human
+
+The standard should make those substitutions explicit and inspectable.
+
+## 5. Verification Must Stay Explicit
+
+Verification is not just "good execution."
+
+The scaffold should keep explicit:
+
+- what is being verified
+- what criteria apply
+- what verdicts are possible
+- where the verdict is recorded
+
+This remains true even when the executor and verifier are both machines.
+
+## 6. Traceability Is Required
+
+The scaffold should preserve enough evidence from execution to support:
+
+- review
+- debugging
+- auditability
+- later scaffold improvement
+
+A harness that cannot be inspected after the fact cannot improve reliably.
+
+## 7. Learn From Use
+
+The scaffold should include a structured path for learning from repeated use.
+
+That means preserving:
+
+- assumptions a task relied on
+- whether those assumptions held
+- what failed or degraded
+- what part of the harness may need revision
+
+## 8. Human Legibility Matters
+
+The standard must remain understandable to a thoughtful human reader.
 
 Prefer:
 
 - explicit definitions
 - stable terminology
 - short explanatory sections
-- cross-references where needed
-- documents with a clear purpose
+- clear module boundaries
+- documents with a single purpose
 
-## 5. Durable Context Over Transient Chat
+## 9. Usability Is Required
 
-Important context should not remain trapped in conversation history.
+A standard that is conceptually elegant but difficult to adopt is incomplete.
 
-If a distinction, constraint, or decision repeatedly matters, promote it into the repository in the correct layer.
+The standard should make it possible to:
 
-## 6. Review Is Cross-Cutting
+- start with a minimal baseline
+- add modules only when needed
+- understand how the modules work together
+- extend the harness without redefining the whole system
 
-Review is not automatically a role.
+## 10. Improvement Should Be Reviewable
 
-Review can apply to planning, architecture, implementation, documentation, orchestration, or outputs. When there is ambiguity between a role and a review type, preserve that ambiguity until it can be resolved cleanly.
+Changes to the scaffold should not appear as silent drift.
 
-## 7. Usability Is Required
+If usage suggests the harness should evolve, the proposed change should be:
 
-A scaffold that is conceptually elegant but difficult to apply is incomplete.
-
-The system should make it possible to:
-
-- start small
-- adopt incrementally
-- understand component interactions in practice
-- learn from examples, not only definitions
-
-## 8. Clarity Over Unnecessary Abstraction
-
-Abstraction is only useful when it improves understanding, reuse, or consistency.
-
-If a change adds layers, terms, or categories without making the system clearer or more usable, it should be reconsidered.
+- visible
+- reviewable
+- attributable
+- placed in the correct layer

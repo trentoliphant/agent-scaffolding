@@ -1,10 +1,10 @@
-# DEVELOPMENT PLAN — [Project Name]
+# HARNESS PLAN — [Project Name]
 
 ## Overview
 
-This document defines the phases, sequencing, and major steps for the project.
+This document defines the phases, sequencing, and major tasks for the project.
 
-This is the map. Step specs are the execution instructions.
+This is the map. Task or step specs are the execution instructions.
 
 ---
 
@@ -18,7 +18,8 @@ This is the map. Step specs are the execution instructions.
 
 ## Phase 1 — [Name]
 
-**Goal:** Describe the capability delivered by this phase.
+**Goal:** Describe the capability or operating improvement delivered by this
+phase.
 
 | Step | Title | Component | Notes |
 |------|-------|-----------|-------|
@@ -38,7 +39,7 @@ This is the map. Step specs are the execution instructions.
 
 ---
 
-## Future phases
+## Future phases or extensions
 
 List acknowledged but not yet fully planned phases.
 
@@ -47,7 +48,7 @@ Short description.
 
 ---
 
-## Decision log
+## Planning notes
 
 | Date | Decision | Rationale |
 |------|----------|-----------|

@@ -1,15 +1,16 @@
-# STEP REVIEW — Step X.Y
+# VERIFICATION RECORD — Task Or Step X.Y
 
 ## 1. Objective alignment
 
-- [ ] The implementation satisfies the stated Objective
-- [ ] The behavior matches the intent of the step, not just the literal code changes
+- [ ] The outcome satisfies the stated Objective
+- [ ] The result matches the intent of the task or step, not just a narrow
+      literal reading
 
 ---
 
 ## 2. Scope adherence
 
-- [ ] Only items in "In Scope" were implemented
+- [ ] Only items in "In Scope" were performed
 - [ ] Nothing from "Out of Scope" was implemented
 - [ ] No future-phase functionality was introduced
 
@@ -28,25 +29,25 @@
 
 - [ ] All acceptance criteria are satisfied
 - [ ] Relevant edge cases are handled
-- [ ] Behavior is deterministic where required
-- [ ] No known incorrect behavior remains within scope
+- [ ] Outputs or decisions are internally consistent where required
+- [ ] No known incorrect or unsupported result remains within scope
 
 ---
 
-## 5. Testing
+## 5. Verification Evidence
 
-- [ ] Required tests are implemented
-- [ ] Tests reflect intended behavior, not outdated assumptions
-- [ ] Tests pass consistently
-- [ ] No test relies on undefined or accidental behavior
+- [ ] Required checks, tests, or reviews were completed
+- [ ] The evidence reflects intended behavior, not outdated assumptions
+- [ ] No verification relied on undefined or accidental behavior
+- [ ] The verification verdict is explicit
 
 ---
 
 ## 6. Regression awareness
 
-- [ ] Existing functionality still works as expected
-- [ ] No unrelated behavior was broken
-- [ ] Changes are localized to intended components
+- [ ] Existing supported behavior still works as expected
+- [ ] No unrelated behavior or process was broken
+- [ ] Changes are localized to intended components or artifacts
 
 ---
 
@@ -54,8 +55,8 @@
 
 If earlier work was modified:
 
-- [ ] Changes were necessary to satisfy the current step
-- [ ] The original step intent remains intact
+- [ ] Changes were necessary to satisfy the current task or step
+- [ ] The original intent remains intact
 - [ ] Changes were not disguised architectural or plan changes
 - [ ] Meaningful corrections were recorded in `HISTORY.md`
 
@@ -69,32 +70,35 @@ If earlier work was modified:
 
 ---
 
-## 9. Code quality
+## 9. Output quality
 
-- [ ] Code is understandable by future contributors and agents
+- [ ] The output is understandable by future contributors and agents
 - [ ] No unnecessary complexity was introduced
-- [ ] Naming is consistent with the system model and coding standards
-- [ ] No obvious dead code or placeholders remain
+- [ ] Naming and terminology are consistent with the system model and
+      applicable standards
+- [ ] No obvious placeholders remain in accepted output
 
 ---
 
 ## 10. Documentation alignment
 
-- [ ] `step_X.Y_spec.md` reflects what was actually implemented, if adjusted
+- [ ] The spec reflects what was actually performed, if adjusted
 - [ ] `PROGRESS.md` is updated correctly
+- [ ] Required trace information is recorded
 - [ ] `HISTORY.md` is updated if meaningful insights occurred
 
 ---
 
 ## 11. Completion decision
 
-- [ ] This step can be considered complete
+- [ ] This task or step can be considered complete
 - [ ] No known work remains within the defined scope
 
 ---
 
-## Notes
+## Verdict And Notes
 
-- Observations during review
+- Verification verdict
+- Observations during verification
 - Any concerns to revisit later
 - Any follow-up actions outside current scope

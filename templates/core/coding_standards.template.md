@@ -1,5 +1,10 @@
 # CODING STANDARDS
 
+> Status: Transitional
+> Alignment: Partially aligned with the open-standard rewrite
+> Intended role: optional implementation-specific template for coding projects
+> Use it for: baseline coding implementations, not as standard core
+
 ## Purpose
 
 This document defines coding and implementation standards for the project.

@@ -1,5 +1,10 @@
 # STARTER KIT FILE SET
 
+> Status: Reference/Migration
+> Alignment: Preserved as a reference source, not aligned as current standard core
+> Intended role: extraction source and migration aid
+> Use it for: learning from older patterns or migrating older workflows
+
 ## Core files
 
 process/OPERATING_MODEL.md

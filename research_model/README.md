@@ -1,5 +1,10 @@
 # Research Domain Adapter
 
+> Status: Incubating
+> Alignment: Not yet aligned with the current open-standard rewrite
+> Intended role: earlier research-domain adapter material
+> Use it for: reference or future integration work, not as current standard core
+
 ## What this is
 
 This is a domain adapter for the agent scaffolding system. It parallels
