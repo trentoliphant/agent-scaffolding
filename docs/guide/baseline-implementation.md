@@ -61,6 +61,57 @@ A baseline implementation should demonstrate at least:
 This means the baseline should be concrete enough to copy, but explicit enough
 to trim, rename, or replace.
 
+## Current Readiness
+
+The current standard description is complete enough to support a cleaner
+baseline implementation pass.
+
+That does not mean the standard is finished in every possible direction.
+It means the standard now has enough stable structure to guide baseline
+materials without asking the baseline to invent missing core concepts.
+
+The baseline pass should be able to rely on:
+
+- the core module map
+- minimum harness contracts
+- trace and verification expectations
+- the self-evolution output placement rule
+- the boundary between core modules and optional extensions
+- the treatment of expertise profiles as optional implementation extensions
+
+During the baseline pass, avoid adding new standard-core concepts unless the
+baseline reveals a true portability or inspectability gap.
+Most remaining work should be implementation cleanup: file selection, template
+wording, example alignment, and clearer copyable starting shapes.
+
+## Recommended Minimal Baseline
+
+For a first adoption, use the smallest file set that can express the standard's
+core questions without forcing a large operating system.
+
+A practical baseline can start with:
+
+```text
+AGENTS.md
+SYSTEM_MODEL.md
+PLAN.md
+PROGRESS.md
+history/
+  decisions/
+```
+
+Use that set to answer:
+
+- what the harness is for
+- which roles and responsibilities exist
+- what work is active
+- how tasks are verified
+- what trace is preserved
+- where durable rationale is recorded
+
+Add `step_spec`, `step_review`, periodic review, workflow, or coding-standard
+templates only when the project needs that extra structure.
+
 ## What Belongs In Baseline Guidance
 
 Baseline guidance is the right place for:

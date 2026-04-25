@@ -33,23 +33,47 @@ Templates are not:
 
 The current `core/` set should be understood as a baseline implementation kit.
 
-It includes assets such as:
+The smallest domain-neutral subset is:
 
-- local system or harness definition
-- planning and progress tracking
-- unit-of-work specification
-- verification record structure
-- history and periodic review
-- workflow and coding standards where those are useful for the implementation
+- `system_model.template.md`
+- `plan.template.md`
+- `progress.template.md`
+- `history.template.md`
 
-Some of these templates reflect earlier coding-oriented phases of the
-repository more strongly than others.
+Additional templates are available when the implementation needs more
+structure:
 
-That is acceptable during the rewrite as long as:
+- `step_spec.template.md` for a fuller unit-of-work contract
+- `step_review.template.md` for a fuller verification record
+- `periodic_review.template.md` for the self-evolution loop
+- `workflow_standards.template.md` for local promotion and repository workflow
+- `coding_standards.template.md` for coding-focused implementations
+
+That is acceptable as long as:
 
 - the templates are clearly treated as implementation assets
 - the standard remains defined in `docs/scaffolding/`
-- template evolution remains visible and deliberate
+- coding-specific templates are not treated as required for non-coding domains
+
+## Baseline Template Classification
+
+For the current baseline path, classify the `core/` templates as follows:
+
+| Template | Baseline status | Why |
+|---|---|---|
+| `system_model.template.md` | Keep | Gives the local harness a clear purpose, boundaries, roles, and verification or trace expectations. |
+| `plan.template.md` | Keep | Gives builders a simple task or phase map without requiring a specific runtime. |
+| `progress.template.md` | Keep | Provides lightweight session state and task-cycle visibility. |
+| `history.template.md` | Keep | Preserves durable observations and follow-ups when a full decision record would be too heavy. |
+| `step_spec.template.md` | Keep | Defines a portable unit-of-work contract with role, verification, and trace expectations. |
+| `step_review.template.md` | Keep | Maps older review language onto the current verification-record model. |
+| `periodic_review.template.md` | Keep | Supports the self-evolution loop by turning repeated trace and verification evidence into reviewed proposals. |
+| `workflow_standards.template.md` | Keep | Provides optional local promotion and repository workflow rules without making them standard core. |
+| `coding_standards.template.md` | Defer | Keep available for coding implementations, but do not include it in the smallest domain-neutral baseline. |
+
+This classification is about the baseline starting path, not file validity.
+Deferred templates may still be the right choice for a specific domain
+implementation.
 
 ## How To Use Templates
 
@@ -60,6 +84,12 @@ Use templates as follows:
 3. Add domain modules, expertise profiles, or runtime integration guidance only
    when needed.
 4. Do not assume every template belongs in every project.
+
+Use [../docs/guide/domain-implementation-extensions.md](../docs/guide/domain-implementation-extensions.md)
+when you need to add domain-specific modules around the templates.
+
+Use [../docs/guide/execution-system-integration.md](../docs/guide/execution-system-integration.md)
+when the templates need to be connected to a specific runtime.
 
 ## Template Design Rules
 
@@ -75,8 +105,9 @@ When revising or adding templates:
 
 ## Current Note
 
-The template layer is still being rewritten to align with the open-standard
-framing.
+The template layer is now aligned around a practical baseline path, but it is
+still an implementation kit rather than the standard itself.
 
-For now, treat it as a practical baseline kit in transition rather than a
-finished canonical implementation.
+Treat `coding_standards.template.md` as a coding-focused extension.
+Use it when the project produces code, and replace it with domain-specific
+production standards when the project does not.

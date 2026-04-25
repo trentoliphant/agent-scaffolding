@@ -10,8 +10,8 @@ definition itself.
 ## Status
 
 - overall status: in progress
-- current phase: direction and architecture definition
-- current focus: establish the standard's scope, modules, and rewrite boundary
+- current phase: baseline implementation alignment
+- current focus: first promoted domain extension pattern
 
 ## Completed
 
@@ -41,19 +41,51 @@ The following clarification work is complete for this initiative:
   from roles and orchestration
 - the self-evolution loop now defines which outputs belong in session state
   versus durable documents, history, and decisions
+- expertise tiers are now modeled as optional autonomy or expertise profiles
+  that modify role authority, review requirements, and escalation thresholds
+- the current standard description has been judged complete enough to support a
+  cleaner baseline implementation pass
+- the baseline implementation guide, minimal example, and template index have
+  been aligned with the current standard description
+- the current `templates/core/` files have been classified as keep, revise, or
+  defer for the baseline pass
+- the `periodic_review` and `workflow_standards` templates have been revised
+  against the current standard framing
+- the `coding_standards` template has been explicitly deferred from the
+  smallest domain-neutral baseline while remaining available for coding
+  implementations
+- the baseline guide, minimal adoption guide, minimal example, template index,
+  start-here guide, and repository-status guide have been checked and patched
+  as one coherent builder path
+- the software-project example has been refreshed as a coding-focused scaling
+  example aligned with the current baseline path
+- roadmap has been refreshed around remaining post-baseline-alignment work
+- execution-system integration guidance has been added to the builder-facing
+  guide layer
+- domain implementation extension guidance has been added to the builder-facing
+  guide layer
+- the research-to-design example has been promoted as the first current
+  domain-extension pattern for builders
+- a curated promoted example set has been completed for coding-focused,
+  research-to-design, regulated-approval, and expertise-tiered extension
+  patterns
+- `design_model/` and `research_model/` have been explicitly retained as
+  incubating extraction sources rather than near-term promoted examples
 
 ## Remaining Work
 
 The main work still remaining in this initiative is:
 
-- define the minimal complete standard
-- clarify how expertise tiers map to responsibility, autonomy, and review
+- use the completed curated example set and incubating extraction sources to
+  decide what reusable extension artifacts should come next
 
 ## Next Step
 
 The immediate next step is:
 
-1. clarify how expertise tiers map to responsibility, autonomy, and review
+1. review the completed example set for reusable template, guide, or decision
+   gaps, then mine incubating extraction sources only where those gaps are
+   real
 
 Use this decision rule:
 
@@ -92,14 +124,12 @@ The current working interpretation is:
 
 The main architecture questions to resolve are:
 
-1. What modules belong in the core standard?
-2. What extension points should domain implementations be allowed to define?
-3. What minimum trace structure should every implementation return?
-4. How should self-evolution outcomes feed back into standard documents,
-   implementation documents, and history?
-5. How should autonomy levels or expertise tiers be represented?
-6. How should the standard describe integration with common execution systems
+1. How should the standard describe integration with common execution systems
    without becoming dependent on them?
+2. Which existing materials should be preserved as reference or migration aids
+   rather than rewritten into the new baseline directly?
+3. When baseline work reveals a gap, what threshold justifies promoting that
+   gap back into the standard core?
 
 ## Proposed Work Sequence
 
@@ -134,6 +164,10 @@ Likely outputs:
 - rewritten builder guides
 - a clearer baseline implementation path
 - integration guidance for common execution systems
+
+Current status:
+
+- ready to begin against the current standard description
 
 ### Phase 4. Reclassify existing materials
 

@@ -6,30 +6,26 @@ It is a planning aid, not a durable definition of the scaffold. Items here may c
 
 ## Near Term
 
-1. Reframe the repository around the open-standard direction and align entry
-   point documents to that purpose
-2. Define the core modules of the standard and which are optional extensions
-3. Add explicit standard treatment for traces, verification contracts, and the
-   self-evolution loop
-4. Clarify how roles, expertise levels, and decision rights work across mixed
-   human and machine systems
-5. Decide how to distinguish the open standard, the baseline implementation,
-   and domain-specific implementations
-6. Review current starter-kit-derived materials and classify them as canonical,
-   transitional, or reference-only
+1. Add integration guidance for common execution systems while preserving
+   model and engine agnosticism
+2. Define how domain implementations should extend the standard and contribute
+   improvements back safely
+3. Refresh or reclassify remaining transitional materials that still carry
+   older coding-first or starter-kit-derived framing
+4. Decide whether the standard, baseline implementation, and domain
+   implementations should remain in one repository or later split
 
 ## Medium Term
 
-1. Publish a baseline implementation path that demonstrates the standard
-   without tying it to one domain or runtime
-2. Add integration guidance for common execution systems while preserving model
-   and engine agnosticism
-3. Define how domain implementations should extend the standard and contribute
-   improvements back safely
-4. Decide whether the standard and domain implementations should live in one
-   repository or multiple repositories
-5. Create a contribution model that welcomes domain experts without weakening
+1. Extract templates or sharper guide material from the completed curated
+   example set when repeated builder need justifies it
+2. Add more promoted extension artifacts only if future builder pressure
+   exposes a need not addressed by the current example set
+3. Create a contribution model that welcomes domain experts without weakening
    the standard's coherence
+4. Evaluate whether older reference and migration materials should remain in
+   this repository long term
+5. Decide what release or versioning shape the open standard should use
 
 ## Watch Items
 
@@ -42,6 +38,10 @@ These are not immediate commitments, but they should remain visible:
 4. Keep the trace and evolution requirements lightweight enough to be adoptable
 5. Preserve the distinction between inspectable governance and specific model
    behavior claims
+6. Keep coding-focused examples useful without letting them redefine the
+   domain-neutral baseline
+7. Keep the promoted example set small enough to stay teaching-oriented rather
+   than becoming a catalog of domain implementations
 
 ## Completion Rule
 

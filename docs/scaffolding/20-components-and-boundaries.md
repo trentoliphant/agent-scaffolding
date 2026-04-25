@@ -226,6 +226,37 @@ Examples:
 These profiles are useful because they let one implementation vary decision
 rights and escalation thresholds without redefining the role itself.
 
+An expertise profile should describe the authority envelope for a role in a
+specific implementation.
+
+At minimum, it should make visible:
+
+- what the actor may decide independently
+- what the actor may execute only with review
+- what the actor must escalate
+- what verification is required before completion
+
+Expertise profiles are not roles by themselves.
+
+For example, `junior`, `regular`, and `senior` should not replace role names
+such as executor, reviewer, approver, or domain expert. They modify how much
+authority a role assignment carries in a given implementation.
+
+Expertise profiles are also not verification contracts.
+
+They may change when verification is required or who must perform it, but the
+criteria for acceptable work should still live in the verification contract.
+
+Placement rule:
+
+- if it defines responsibility, it belongs in a role
+- if it defines criteria and verdicts, it belongs in a verification contract
+- if it defines independent authority, review requirements, or escalation
+  thresholds for a role assignment, it belongs in an autonomy or expertise
+  profile
+- if it defines when those thresholds affect routing, it belongs in
+  orchestration
+
 ### Workflow Standards
 
 Workflow standards define repository-level or organization-level conventions

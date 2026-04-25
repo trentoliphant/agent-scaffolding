@@ -28,8 +28,28 @@ If you are a builder:
 - then use [docs/guide/minimal-adoption.md](docs/guide/minimal-adoption.md)
 - use [docs/guide/customizing.md](docs/guide/customizing.md) when you need to
   add domain-specific modules, expertise tiers, or runtime integrations
+- read
+  [docs/guide/execution-system-integration.md](docs/guide/execution-system-integration.md)
+  when you need to map the harness onto a specific runtime
+- read
+  [docs/guide/domain-implementation-extensions.md](docs/guide/domain-implementation-extensions.md)
+  when you need domain-specific roles, verification, or overlays without
+  redefining the shared standard
 - review [docs/examples/minimal/README.md](docs/examples/minimal/README.md)
   for a deliberately small example
+- review
+  [docs/examples/research-to-design/README.md](docs/examples/research-to-design/README.md)
+  for a non-software example that shows research feeding design and a current
+  domain-extension pattern
+- review
+  [docs/examples/software-project/README.md](docs/examples/software-project/README.md)
+  for a coding-focused scaling pattern
+- review
+  [docs/examples/regulated-approval/README.md](docs/examples/regulated-approval/README.md)
+  for a regulated or approval-heavy pattern
+- review
+  [docs/examples/expertise-tiered-review/README.md](docs/examples/expertise-tiered-review/README.md)
+  for an expertise-tiered autonomy and review pattern
 - use [docs/guide/starter-kit-adoption.md](docs/guide/starter-kit-adoption.md)
   only if you want to learn from or migrate older starter-kit-derived patterns
 

@@ -20,10 +20,46 @@ explicit in your project.
    baseline.
 5. Use [customizing.md](customizing.md) to add optional modules such as domain
    rules, expertise tiers, or runtime integration profiles.
-6. Review [../examples/minimal/README.md](../examples/minimal/README.md)
+6. Read
+   [execution-system-integration.md](execution-system-integration.md)
+   when you need to map the harness onto a real runtime without making that
+   runtime part of the standard core.
+7. Read
+   [domain-implementation-extensions.md](domain-implementation-extensions.md)
+   when your project needs domain-specific roles, verification, or overlays
+   without redefining the shared standard.
+8. Review
+   [../examples/research-to-design/README.md](../examples/research-to-design/README.md)
+   when you want to study the first promoted domain-extension pattern and a
+   non-software research-to-design handoff.
+9. Review [../examples/minimal/README.md](../examples/minimal/README.md)
    before adding more structure.
-7. Use [starter-kit-adoption.md](starter-kit-adoption.md) only when older
+10. Review
+   [../examples/software-project/README.md](../examples/software-project/README.md)
+   when you want a coding-focused scaling pattern.
+11. Review
+   [../examples/regulated-approval/README.md](../examples/regulated-approval/README.md)
+   when your domain needs visible approvals, compliance review, or escalation
+   by risk.
+12. Review
+   [../examples/expertise-tiered-review/README.md](../examples/expertise-tiered-review/README.md)
+   when the same role needs different autonomy or review thresholds by
+   expertise.
+13. Use [starter-kit-adoption.md](starter-kit-adoption.md) only when older
    starter-kit-derived patterns are relevant to your adoption or migration.
+
+## Current Example Set
+
+The current curated example set is:
+
+- one minimal baseline example
+- one coding-focused scaling pattern
+- one document-first research-to-design pattern
+- one regulated approval pattern
+- one expertise-tiered review pattern
+
+Additional examples should fill a builder need that this set does not already
+address.
 
 ## Material Status Rule
 
@@ -67,7 +103,8 @@ heavy for the current stage.
 For many projects, the first useful version only needs:
 
 - a short operating contract for how agents work in the repository
-- a small standard definition describing roles, tasks, verification, and traces
+- a small local harness definition describing roles, tasks, verification, and
+  traces
 - one lightweight workflow loop
 - a place to record durable decisions
 

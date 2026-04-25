@@ -21,14 +21,15 @@ The builder wants:
 
 ```text
 AGENTS.md
-docs/
-  scaffolding/
-    00-overview.md
-    20-components-and-boundaries.md
-    50-traces-verification-and-evolution.md
+SYSTEM_MODEL.md
+PLAN.md
+PROGRESS.md
 history/
   decisions/
 ```
+
+This structure expresses the standard locally without requiring the project to
+copy the repository's full `docs/scaffolding/` definition.
 
 ## Example Definitions
 
@@ -40,6 +41,16 @@ The local harness might define:
 - a verification contract for boundary compliance
 - a lightweight trace requirement for each completed task cycle
 
+The files map to the standard this way:
+
+- `AGENTS.md` defines local agent behavior, escalation expectations, and
+  repository-specific working rules
+- `SYSTEM_MODEL.md` defines the local harness purpose, role boundaries,
+  verification expectations, and trace expectations
+- `PLAN.md` defines the current task sequence or phases
+- `PROGRESS.md` tracks task status, actor, verification state, and trace state
+- `history/decisions/` preserves durable rationale when the harness changes
+
 The orchestration can stay simple:
 
 1. A task is defined.
@@ -47,6 +58,18 @@ The orchestration can stay simple:
 3. Verification is applied.
 4. A lightweight trace is recorded.
 5. Any durable lesson is recorded as a decision.
+
+An individual task trace can stay small:
+
+```text
+Task: Update the import path in the reporting command.
+Responsible role: implementation
+Acting party: machine agent
+Outcome: command now imports the shared formatter
+Evidence: targeted test passed
+Verification result: accepted
+Next action: mark task complete in progress
+```
 
 ## Why This Example Matters
 
@@ -61,3 +84,13 @@ It does not require:
 - a large document system
 
 It only requires explicit structure where the work benefits from it most.
+
+## What To Add Next
+
+If this minimal shape is working but the project now needs runtime-specific
+mapping, read
+[../../guide/execution-system-integration.md](../../guide/execution-system-integration.md).
+
+If the project needs domain-specific roles, verification modules, or overlays,
+read
+[../../guide/domain-implementation-extensions.md](../../guide/domain-implementation-extensions.md).

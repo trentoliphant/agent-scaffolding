@@ -44,6 +44,24 @@ Common adaptations include:
 - adding trace fields that matter in a specific runtime or domain
 - starting from the templates and trimming them down for local needs
 
+## Adding Expertise Tiers
+
+Add expertise tiers when the same role may carry different decision rights in
+different assignments.
+
+For each tier, define:
+
+- what work it may complete independently
+- what work requires review before completion
+- what uncertainty, risk, or scope must be escalated
+- which verification contracts apply before the work can be accepted
+
+Keep the tier separate from the role.
+
+For example, `senior reviewer` may be a reviewer role assignment with a senior
+expertise profile. The reviewer role still defines responsibility, the senior
+profile defines autonomy, and the verification contract defines the criteria.
+
 ## Changes That Need Extra Care
 
 Be careful when:
@@ -80,3 +98,7 @@ The most common extension categories are:
 
 These are valuable, but they should plug into the standard rather than redefine
 the standard silently.
+
+Use [domain-implementation-extensions.md](domain-implementation-extensions.md)
+when you need a fuller guide for turning those categories into a coherent
+domain implementation.

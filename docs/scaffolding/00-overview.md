@@ -121,6 +121,12 @@ Optional extensions may include:
 Extensions are important, but they should plug into the core rather than blur
 the core.
 
+Autonomy or expertise profiles are optional because not every minimal harness
+needs graded decision rights.
+When used, they should modify a role assignment's authority, review
+requirements, and escalation thresholds rather than replacing roles or
+verification contracts.
+
 ## Reading Paths
 
 If you are a builder:

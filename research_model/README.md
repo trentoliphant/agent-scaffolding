@@ -1,15 +1,27 @@
-# Research Domain Adapter
+# Research Model
 
 > Status: Incubating
 > Alignment: Not yet aligned with the current open-standard rewrite
-> Intended role: earlier research-domain adapter material
-> Use it for: reference or future integration work, not as current standard core
+> Intended role: Earlier research-oriented adapter material now treated as an
+> extraction source
+> Use it for: selective extraction of reusable patterns, not as a promoted
+> example or current builder-path artifact
 
 ## What this is
 
-This is a domain adapter for the agent scaffolding system. It parallels
-the design domain adapter but is built for investigative and analytical
-work rather than system design work.
+This is earlier research-oriented adapter material for investigative and
+analytical work.
+
+It may still be useful as an extraction source for:
+
+- evidence-discipline guidance
+- research-specific verification ideas
+- plan mutation rules
+- research-oriented template structure
+
+It is not currently part of the promoted example set.
+Promote only extracted pieces that fill a builder need not already covered by
+the current curated examples.
 
 ## When to use this adapter vs the design adapter
 
@@ -97,7 +109,8 @@ specifically.
 
 ## Integration status
 
-This adapter has not yet been integrated into the main scaffold
-repository structure. It should be placed alongside the design
-adapter, with the scaffold's documentation updated to reference
-both adapters and explain when each applies.
+This material remains in the incubating layer.
+
+It should not be promoted wholesale into the main builder path.
+Instead, use it as source material for selective extraction when the current
+example set or guide layer reveals a real gap.

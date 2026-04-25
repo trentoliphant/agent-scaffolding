@@ -33,11 +33,9 @@ In your own project, start with something like:
 
 ```text
 AGENTS.md
-docs/
-  scaffolding/
-    00-overview.md
-    20-components-and-boundaries.md
-    50-traces-verification-and-evolution.md
+SYSTEM_MODEL.md
+PLAN.md
+PROGRESS.md
 history/
   decisions/
 ```
@@ -52,7 +50,7 @@ state/
 This gives you:
 
 - a repo-specific operating contract
-- a small but explicit local standard definition
+- a small but explicit local harness definition
 - a baseline implementation shape that is easy to adapt
 - a place to define trace and verification expectations
 - a place for durable rationale
@@ -66,18 +64,27 @@ Use `AGENTS.md` for:
 - local editing and review expectations
 - escalation expectations
 
-Use `docs/scaffolding/00-overview.md` for:
+Use `SYSTEM_MODEL.md` for:
 
 - what the local harness is trying to achieve
-- the core modules you are actually using
-- the intended scope of the harness
-
-Use `docs/scaffolding/20-components-and-boundaries.md` for:
-
-- the local definitions of roles, tasks, verification, and orchestration
+- the roles, tasks, verification, trace, and orchestration shape you are
+  actually using
 - the boundary between standard-core concepts and local extensions
 
-Use `docs/scaffolding/50-traces-verification-and-evolution.md` for:
+Use `PLAN.md` for:
+
+- the current phases, tasks, or work sequence
+- which pieces of the harness are being introduced first
+- what is intentionally deferred
+
+Use `PROGRESS.md` for:
+
+- current task status
+- responsible role and acting party
+- verification state
+- trace state or links to task records
+
+Use `SYSTEM_MODEL.md` or a task-specific record for:
 
 - the minimum trace expected from a task cycle
 - the verification contract used locally
@@ -133,6 +140,16 @@ The next useful additions are often:
 - domain-specific verification modules
 - integration guidance for a specific execution system
 - richer examples for common task patterns
+
+Use [execution-system-integration.md](execution-system-integration.md) when the
+next pressure is runtime-specific.
+
+Use
+[domain-implementation-extensions.md](domain-implementation-extensions.md)
+when the next pressure is domain-specific roles, verification, or overlays.
+
+Use [../examples/research-to-design/README.md](../examples/research-to-design/README.md)
+when you want one current example of a promoted domain-extension pattern.
 
 If older starter-kit-derived patterns are relevant to your project, use
 [starter-kit-adoption.md](starter-kit-adoption.md) as reference or migration

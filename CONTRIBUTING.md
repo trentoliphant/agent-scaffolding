@@ -163,6 +163,14 @@ Keep these distinctions explicit:
 
 None of those should silently become the standard definition.
 
+When adding to `docs/examples/`, prefer a small curated set of promoted
+examples rather than a broad catalog.
+Add another example only when it fills a builder need that the existing
+examples do not already address.
+If the material needs large local structure or dense domain-specific context to
+make sense, it likely belongs in a domain implementation, incubating area, or
+reference layer instead.
+
 ## Builder Awareness
 
 If contributor-facing refinement makes the repository harder to adopt, that

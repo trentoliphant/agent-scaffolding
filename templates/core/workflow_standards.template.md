@@ -1,25 +1,28 @@
 # WORKFLOW STANDARDS
 
-> Status: Transitional
-> Alignment: Partially aligned with the open-standard rewrite
+> Status: Optional baseline
+> Alignment: Aligned with the open-standard rewrite
 > Intended role: optional implementation-specific template for repository workflow conventions
-> Use it for: baseline implementation workflow, not as standard core
+> Use it for: local promotion, handoff, and repository workflow rules, not as
+> standard core
 
 ## Purpose
 
-This document defines workflow and repository practices for the project.
+This document defines local workflow and repository practices for the project.
 
 It governs how changes are prepared, reviewed, recorded, and promoted through
 the development process.
 
 It does not define:
 - system architecture
-- coding conventions
-- project planning structure
+- coding or domain-production conventions
+- project planning structure or domain task content
 
 Architecture is defined in `SYSTEM_MODEL.md`.
-Coding conventions are defined in `CODING_STANDARDS.md`.
-Execution governance is defined in the project's operating model or equivalent orchestration/workflow document.
+Implementation conventions may be defined in `CODING_STANDARDS.md` or another
+domain-specific standards document.
+Task sequencing is defined in `PLAN.md` and current status is tracked in
+`PROGRESS.md` or an equivalent state record.
 
 ---
 
@@ -28,8 +31,8 @@ Execution governance is defined in the project's operating model or equivalent o
 - Work should be traceable
 - Changes should be intentional and scoped
 - Repository history should remain understandable
-- Documentation and code should stay aligned
-- Step completion should reflect reality, not aspiration
+- Durable documents and implementation artifacts should stay aligned
+- Task completion should reflect reality, not aspiration
 - Shared truth documents should change explicitly
 
 ---
@@ -41,22 +44,27 @@ This document applies to:
 - Git usage
 - Commits
 - Branching
-- Step lifecycle updates
+- Task lifecycle updates
 - Review and promotion workflow
 - Update rules for project documents
+
+Use only the sections that match the project's actual workflow.
+Projects that do not use Git, commits, or pull requests should replace those
+sections with equivalent local promotion rules.
 
 ---
 
 ## Workflow roles
 
 ### Contributor
-Implements work for an assigned step.
+Performs work for an assigned task.
 
 ### Reviewer
-Validates work against step and project standards.
+Applies the relevant verification contract before the work is accepted.
 
 ### Human approver
-Approves promotion of work where required by the operating model.
+Approves promotion of work where required by local authority, risk, or
+escalation rules.
 
 ---
 
@@ -66,18 +74,18 @@ Approves promotion of work where required by the operating model.
 
 - Changes must be made on an appropriate branch unless the project explicitly
   uses a different workflow
-- Work on unrelated steps should not be mixed in the same branch
-- Branches should reflect the step or purpose of the work
+- Work on unrelated tasks should not be mixed in the same branch
+- Branches should reflect the task or purpose of the work
 
 ### Preferred
 
 - Use short, descriptive branch names
-- Include step identifier when applicable
+- Include task identifier when applicable
 
 Examples:
-- `step-1.10-exclusions`
+- `task-1.10-exclusions`
 - `phase-2-cli-search`
-- `fix-step-1.12-index-writer`
+- `fix-task-1.12-index-writer`
 
 ### Avoid
 
@@ -93,14 +101,14 @@ Examples:
 
 - Commits must represent intentional units of change
 - Commit messages must be clear and descriptive
-- Commits should align with the current step where applicable
-- Do not commit broken or knowingly incomplete work as final step completion
+- Commits should align with the current task where applicable
+- Do not commit broken or knowingly incomplete work as final task completion
 
 ### Preferred
 
 - Keep commits small enough to understand
 - Separate documentation updates from unrelated code changes when practical
-- Use step identifiers in commit messages
+- Use task identifiers in commit messages
 
 ### Avoid
 
@@ -116,14 +124,14 @@ Use a clear, structured format.
 
 ### Preferred format
 
-`step-X.Y: short description`
+`task-X.Y: short description`
 
 Examples:
-- `step-1.10: add exclusion rules component`
-- `step-2.4: implement search command output`
-- `step-3.2: add hardware detection`
+- `task-1.10: add exclusion rules component`
+- `task-2.4: implement search command output`
+- `task-3.2: add hardware detection`
 
-For non-step changes:
+For non-task changes:
 - `plan: reorder phase 2 dependencies`
 - `system-model: clarify connector boundary`
 - `workflow: update review criteria`
@@ -152,67 +160,69 @@ For non-step changes:
 
 ---
 
-## Pull request / merge standards
+## Pull Request Or Promotion Standards
 
-Use this section only if the project uses PRs or equivalent review flow.
+Use this section only if the project uses pull requests, merge requests, or an
+equivalent promotion flow.
 
 ### Required
 
 - PRs must state what changed and why
-- PRs must identify the related step(s)
+- PRs must identify the related task or work item
 - PRs must note any changes to shared truth documents:
   - `SYSTEM_MODEL.md`
   - `PLAN.md`
-  - operating model or equivalent execution-governance document
+  - `PROGRESS.md`
+  - workflow standards or equivalent orchestration document
   - templates
 
 ### Preferred
 
-- Keep PRs aligned to a single step or closely related unit of work
+- Keep PRs aligned to a single task or closely related unit of work
 - Include testing notes
 - Include review notes or known limitations when relevant
 
 ### Avoid
 
-- Large PRs spanning many unrelated steps
-- Merging without confirming step state and documentation alignment
+- Large PRs spanning many unrelated tasks
+- Merging without confirming task state and documentation alignment
 
 ---
 
-## Step lifecycle workflow
+## Task Lifecycle Workflow
 
-The default workflow for a step is:
+The default workflow for a task is:
 
-1. Select step from `PLAN.md` and `PROGRESS.md`
-2. Prepare or update `step_X.Y_spec.md`
-3. Execute implementation
-4. Run tests
-5. Perform review
-6. Update project documents
-7. Commit changes
-8. Mark status appropriately
+1. Select task from `PLAN.md` and `PROGRESS.md`
+2. Prepare or update a task specification when useful
+3. Execute the work
+4. Run required checks or collect required evidence
+5. Apply the relevant verification contract
+6. Record the task-cycle trace
+7. Update project documents when the task changes durable truth
+8. Promote or commit changes through the local workflow
+9. Mark status appropriately
 
 ---
 
-## Step status rules
+## Task Status Rules
 
-Use consistent step statuses.
+Use consistent task statuses.
 
 ### Standard statuses
 
 - Not Started
 - In Progress
-- Agent Review
-- Machine Complete
-- Human Review
+- Pending Verification
+- Verification In Progress
 - Done
 - Blocked
 
 ### Required
 
 - Status must reflect real state
-- Do not mark a step Done before required review is complete
-- Do not mark a step Machine Complete if reviewer concerns remain unresolved
+- Do not mark a task Done before required verification is complete
+- Do not mark a task Done if unresolved verifier concerns remain
 
 ---
 
@@ -221,9 +231,9 @@ Use consistent step statuses.
 ### PROGRESS.md
 
 Update when:
-- a step starts
-- a step changes status
-- a step is blocked
+- a task starts
+- a task changes status
+- a task is blocked
 - ownership changes
 
 Must remain:
@@ -237,9 +247,8 @@ Must remain:
 
 Update when:
 - a meaningful discovery occurs
-- a fix-forward correction is made
 - behavior differs from prior assumptions
-- a useful implementation insight should be preserved
+- a useful implementation or harness insight should be preserved
 
 Must remain:
 - append-only
@@ -253,7 +262,7 @@ Must remain:
 Update only when:
 - sequencing is wrong
 - dependency structure is wrong
-- steps need to be added, removed, or reorganized
+- tasks need to be added, removed, or reorganized
 
 Do not update PLAN.md implicitly during normal implementation.
 
@@ -277,45 +286,38 @@ Update only when:
 - periodic review identifies a reusable improvement
 - the team explicitly agrees to a new default
 
+Do not promote a single task-specific preference into a shared standard without
+evidence that it should recur.
+
 ---
 
 ## Review workflow
 
 ### Required
 
-Before a step is promoted:
-- required tests must pass
-- required review must occur
+Before a task is promoted:
+- required checks or evidence must be complete
+- required verification must occur
 - required document updates must be completed
 
 ### Preferred
 
-- Reviewer comments should be actionable and concise
-- Human approval should focus on trust and correctness, not redoing all prior review
+- Verifier comments should be actionable and concise
+- Human approval should focus on trust, risk, and decision rights, not redoing
+  all prior verification
 
 ---
 
 ## Blocking rules
 
-A step should be marked Blocked when:
+A task should be marked Blocked when:
 
 - required dependencies are not met
-- architectural clarification is needed
+- harness, architecture, or domain clarification is needed
 - plan sequencing prevents safe progress
 - external information or approval is required
 
 Blocked status should include a brief note explaining why.
-
----
-
-## Experimental workflow
-
-If operating in experimental mode:
-
-- mark the run or step clearly as experimental
-- do not treat experimental output as Done for production purposes
-- keep outputs separate or clearly labeled
-- use post-experiment review before promoting process changes
 
 ---
 
@@ -324,7 +326,7 @@ If operating in experimental mode:
 ### Required
 
 - Remove temporary artifacts not meant for version control
-- Ensure repository state is understandable after each step
+- Ensure repository state is understandable after each task
 - Keep planning and execution artifacts organized consistently
 
 ### Preferred
@@ -348,7 +350,7 @@ If a project needs to deviate:
 - make the deviation explicit
 - keep it narrow in scope
 - document the reason when meaningful
-- avoid silent drift from the standard
+- avoid silent drift from the local harness
 
 ---
 
@@ -358,6 +360,6 @@ This document does not define:
 
 - Architecture
 - Code style or language conventions
-- Step-specific implementation instructions
+- Task-specific implementation instructions
 - Model evaluation rules
 - Human or agent role capability profiles

@@ -29,13 +29,22 @@ These areas are the main source of truth for the current direction:
 | `docs/guide/baseline-implementation.md` | Current | Defines how the baseline relates to the standard |
 | `docs/guide/minimal-adoption.md` | Current | Default builder adoption path |
 | `docs/guide/customizing.md` | Current | Explains safe extension of the standard |
+| `docs/guide/execution-system-integration.md` | Current | Explains how to map the harness onto a real runtime without making the runtime part of the standard core |
+| `docs/guide/domain-implementation-extensions.md` | Current | Explains how to extend the harness for a specific domain without redefining the shared standard |
 | `docs/guide/repository-status.md` | Current | Tracks the current classification pass |
+| `docs/examples/minimal/README.md` | Current | Minimal teaching example aligned with the baseline path |
+| `docs/examples/software-project/README.md` | Current | Coding-focused scaling example and promoted extension pattern aligned with the baseline path |
+| `docs/examples/research-to-design/README.md` | Current | Non-software example showing a research-to-design handoff and a promoted extension pattern |
+| `docs/examples/regulated-approval/README.md` | Current | Regulated or approval-heavy example showing a promoted overlay pattern |
+| `docs/examples/expertise-tiered-review/README.md` | Current | Expertise-profile example showing a promoted autonomy and review pattern |
+| `templates/` | Current | Baseline implementation assets aligned around the current starting path |
 | `README.md` | Current | Top-level audience router aligned to the rewrite |
 | `AGENTS.md` | Current | Repo-specific operating contract for agent work |
 | `CONTRIBUTING.md` | Current | Contributor workflow aligned to the rewrite |
 | `history/decisions/0006-...` | Current | Records the current framing decision |
 | `state/current.md` | Current | Names the active rewrite and current priorities |
 | `state/open-standard-rewrite-plan.md` | Current | Tracks the rewrite initiative |
+| `state/roadmap.md` | Current | Planning aid refreshed around post-baseline-alignment work |
 
 ## Transitional Areas
 
@@ -43,12 +52,7 @@ These areas are active and useful, but not fully aligned yet:
 
 | Path | Status | Notes |
 |---|---|---|
-| `templates/` | Transitional | Baseline implementation assets still being rewritten around the standard |
-| `templates/core/coding_standards.template.md` | Transitional | Useful but still strongly coding-oriented |
-| `templates/core/workflow_standards.template.md` | Transitional | Useful but still more implementation-specific than standard-core |
-| `docs/examples/minimal/README.md` | Transitional | Strongly aligned to the new direction, but still only one teaching example |
-| `docs/examples/software-project/README.md` | Transitional | Useful scaling example, but still uses older scaffold and review-type framing |
-| `state/roadmap.md` | Transitional | Useful planning aid, but not yet fully refreshed around completed rewrite steps |
+| `templates/core/coding_standards.template.md` | Transitional | Useful coding-focused extension, but intentionally deferred from the smallest domain-neutral baseline |
 
 ## Reference And Migration Areas
 
@@ -80,8 +84,8 @@ the current standard shape:
 
 | Path | Status | Notes |
 |---|---|---|
-| `design_model/` | Incubating | Domain-adapter material from an earlier phase, not yet aligned |
-| `research_model/` | Incubating | Domain-adapter material from an earlier phase, not yet aligned |
+| `design_model/` | Incubating | Earlier design-oriented adapter material kept as an extraction source, not as a near-term promoted example |
+| `research_model/` | Incubating | Earlier research-oriented adapter material kept as an extraction source, not as a near-term promoted example |
 
 ## Practical Reading Rule
 

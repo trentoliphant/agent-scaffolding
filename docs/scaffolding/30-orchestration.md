@@ -79,6 +79,30 @@ As a harness becomes more capable, orchestration may need to define:
 These additions should be introduced only when they make the harness clearer,
 safer, or easier to improve.
 
+## Orchestration And Expertise Profiles
+
+Expertise profiles affect orchestration when they change what a role assignment
+may do without additional review.
+
+For example, an implementation might allow:
+
+- a senior executor to complete low-risk work after self-checking
+- a regular executor to complete the same work after a reviewer accepts it
+- a junior executor to draft the work but require handoff before completion
+
+Those differences do not redefine the executor role.
+They define autonomy thresholds, review requirements, and escalation triggers
+for that role assignment.
+
+Orchestration should make those consequences inspectable:
+
+- which profile may start or complete which task types
+- which profile requires verification before completion
+- which profile must escalate uncertainty or high-risk changes
+- which verdicts route work back, forward, or upward
+
+The verification criteria themselves still belong in verification contracts.
+
 ## Orchestration And Verification
 
 Orchestration decides when verification happens and how verdicts affect the next
