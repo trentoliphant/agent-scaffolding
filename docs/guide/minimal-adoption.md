@@ -33,18 +33,20 @@ In your own project, start with something like:
 
 ```text
 AGENTS.md
-SYSTEM_MODEL.md
-PLAN.md
-PROGRESS.md
-history/
-  decisions/
+scaffold/
+  SYSTEM_MODEL.md
+  PLAN.md
+  PROGRESS.md
+  history/
+    decisions/
 ```
 
 Optional when work spans multiple sessions:
 
 ```text
-state/
-  current.md
+scaffold/
+  state/
+    current.md
 ```
 
 This gives you:
@@ -56,6 +58,15 @@ This gives you:
 - a place for durable rationale
 - an optional continuity layer for multi-session work
 
+For many coding projects, this is enough structure to start.
+The scaffold should describe how work is coordinated around the codebase, not
+replace the codebase as the repository's main content.
+
+Keeping `AGENTS.md` at the repository root while placing the rest of the
+scaffold in a single directory is often a good default for coding projects.
+It keeps the top level focused on the actual product while still making the
+harness easy to find.
+
 ## What To Put In Those Files
 
 Use `AGENTS.md` for:
@@ -63,13 +74,14 @@ Use `AGENTS.md` for:
 - how agents should work in the project
 - local editing and review expectations
 - escalation expectations
+- where the rest of the scaffold lives if it is grouped in one directory
 
 Use `SYSTEM_MODEL.md` for:
 
 - what the local harness is trying to achieve
 - the roles, tasks, verification, trace, and orchestration shape you are
   actually using
-- the boundary between standard-core concepts and local extensions
+- the local choices you are making so they stay visible and reviewable later
 
 Use `PLAN.md` for:
 
@@ -104,6 +116,10 @@ Use `state/current.md` when needed for:
 - active tasks or blocking issues
 - candidate harness changes not yet adopted
 
+The exact directory name is a local choice.
+For many software projects, a dedicated directory such as `scaffold/` is
+clearer than spreading harness files across the repository root.
+
 ## Suggested First Workflow
 
 A simple first workflow is:
@@ -116,6 +132,31 @@ A simple first workflow is:
 6. Record any durable structural lesson as a decision.
 
 That loop is often enough to prove whether the harness is helping.
+
+## Keep The Scaffold Small Relative To The Project
+
+In most projects, the scaffold should occupy a small surface area compared with
+the primary project artifacts.
+
+For example:
+
+- in a software project, source code, tests, product docs, and operational
+  assets should remain primary
+- in a research workflow, notes, sources, syntheses, and outputs should remain
+  primary
+- in a design workflow, briefs, explorations, decisions, and deliverables
+  should remain primary
+
+The scaffold is successful when it clarifies the work without demanding that
+every project create a large parallel document system.
+
+If the scaffold starts to dominate repository attention, trim it back to the
+smallest set that still makes roles, verification, traces, and decisions
+explicit.
+
+That does not mean your first version has to be perfect.
+It means changes to the scaffold should be intentional enough that the team can
+tell why a file, rule, or workflow exists.
 
 ## When To Add More
 
@@ -136,10 +177,17 @@ Common triggers include:
 The next useful additions are often:
 
 - a more explicit orchestration document
+- reusable verification-contract definitions when acceptance criteria repeat
+  across tasks
 - autonomy or expertise profiles such as junior, regular, and senior
 - domain-specific verification modules
 - integration guidance for a specific execution system
 - richer examples for common task patterns
+
+For coding work in particular, treat `CODING_STANDARDS.md`,
+`WORKFLOW_STANDARDS.md`, task specs, review records, or reusable verification
+contracts as optional scaling tools.
+They are not the default entry price for using the scaffold.
 
 Use [execution-system-integration.md](execution-system-integration.md) when the
 next pressure is runtime-specific.

@@ -26,13 +26,14 @@ Start from the same baseline shape as the minimal adoption path:
 
 ```text
 AGENTS.md
-SYSTEM_MODEL.md
-PLAN.md
-PROGRESS.md
-history/
-  decisions/
-state/
-  current.md
+scaffold/
+  SYSTEM_MODEL.md
+  PLAN.md
+  PROGRESS.md
+  history/
+    decisions/
+  state/
+    current.md
 ```
 
 Then add software-specific implementation assets only when they help:
@@ -49,6 +50,31 @@ reviews/
 
 The first group expresses the local harness.
 The second group is a software-project extension of that harness.
+
+The software project itself should still remain visually primary.
+In practice, a coding repository will usually have far more code and test
+artifacts than scaffold artifacts.
+
+For example:
+
+```text
+AGENTS.md
+src/
+tests/
+docs/
+scaffold/
+  SYSTEM_MODEL.md
+  PLAN.md
+  PROGRESS.md
+  history/
+    decisions/
+  state/
+    current.md
+```
+
+That shape is already valid.
+Add `CODING_STANDARDS.md`, `WORKFLOW_STANDARDS.md`, task specs, and review
+records only when the project's coordination pressure justifies them.
 
 ## Example Roles
 
@@ -118,6 +144,10 @@ becoming a software-only standard.
 The scaling move is not to copy every possible file.
 The scaling move is to add explicit task, verification, trace, workflow, and
 coding standards only where the project benefits from them.
+
+If the scaffold starts attracting more maintenance attention than the code
+quality, tests, product behavior, or release flow it is supposed to support,
+the project should simplify the scaffold again.
 
 For the general extension rules behind those additions, use
 [../../guide/domain-implementation-extensions.md](../../guide/domain-implementation-extensions.md)

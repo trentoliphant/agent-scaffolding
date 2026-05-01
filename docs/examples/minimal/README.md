@@ -21,11 +21,12 @@ The builder wants:
 
 ```text
 AGENTS.md
-SYSTEM_MODEL.md
-PLAN.md
-PROGRESS.md
-history/
-  decisions/
+scaffold/
+  SYSTEM_MODEL.md
+  PLAN.md
+  PROGRESS.md
+  history/
+    decisions/
 ```
 
 This structure expresses the standard locally without requiring the project to
@@ -45,11 +46,13 @@ The files map to the standard this way:
 
 - `AGENTS.md` defines local agent behavior, escalation expectations, and
   repository-specific working rules
-- `SYSTEM_MODEL.md` defines the local harness purpose, role boundaries,
+- `scaffold/SYSTEM_MODEL.md` defines the local harness purpose, role boundaries,
   verification expectations, and trace expectations
-- `PLAN.md` defines the current task sequence or phases
-- `PROGRESS.md` tracks task status, actor, verification state, and trace state
-- `history/decisions/` preserves durable rationale when the harness changes
+- `scaffold/PLAN.md` defines the current task sequence or phases
+- `scaffold/PROGRESS.md` tracks task status, actor, verification state, and
+  trace state
+- `scaffold/history/decisions/` preserves durable rationale when the harness
+  changes
 
 The orchestration can stay simple:
 

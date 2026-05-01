@@ -4,12 +4,17 @@ Use this guide when the base standard is helpful but your project needs local
 adaptation.
 
 The standard is meant to be modular. Customization is expected. The key is to
-extend it without collapsing distinctions that preserve clarity, portability,
-and reviewability.
+extend it deliberately so the resulting project stays clear, portable, and
+reviewable.
 
-## Preserve The Core Distinctions
+This is not a guide against changing the scaffold.
+It is a guide for changing your use of the scaffold consciously enough that the
+project can explain its own local choices later.
 
-Customization should not erase distinctions that are doing useful work.
+## Customize Deliberately
+
+When you customize, try to keep useful distinctions visible unless you have a
+reason to merge them.
 
 Try to preserve:
 
@@ -43,6 +48,9 @@ Common adaptations include:
 - adding a lightweight session-state file for multi-session work
 - adding trace fields that matter in a specific runtime or domain
 - starting from the templates and trimming them down for local needs
+
+The goal is not to keep every inherited shape untouched.
+The goal is to make your modifications look intentional rather than accidental.
 
 ## Adding Expertise Tiers
 
@@ -96,8 +104,8 @@ The most common extension categories are:
 - workflow standards for a specific repository or organization
 - regulated-domain overlays
 
-These are valuable, but they should plug into the standard rather than redefine
-the standard silently.
+These are valuable, but they should be added in a way that keeps the local
+change visible rather than making the scaffold drift silently.
 
 Use [domain-implementation-extensions.md](domain-implementation-extensions.md)
 when you need a fuller guide for turning those categories into a coherent

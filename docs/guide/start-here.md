@@ -22,12 +22,12 @@ explicit in your project.
    rules, expertise tiers, or runtime integration profiles.
 6. Read
    [execution-system-integration.md](execution-system-integration.md)
-   when you need to map the harness onto a real runtime without making that
-   runtime part of the standard core.
+   when you need to map the harness onto a real runtime while keeping that
+   runtime-specific choice explicit.
 7. Read
    [domain-implementation-extensions.md](domain-implementation-extensions.md)
    when your project needs domain-specific roles, verification, or overlays
-   without redefining the shared standard.
+   and you want those local choices to stay deliberate and legible.
 8. Review
    [../examples/research-to-design/README.md](../examples/research-to-design/README.md)
    when you want to study the first promoted domain-extension pattern and a
@@ -85,6 +85,22 @@ The default builder path is:
 - treat older reference implementations as learning material, not as the
   default starting point
 
+The scaffold should stay subordinate to the project it supports.
+
+In a software repository, the codebase, tests, product docs, and shipping
+workflow should still be the center of gravity.
+In a research or design repository, the primary artifacts and deliverables
+should still be primary.
+
+The scaffold is there to make the work easier to coordinate, inspect, and
+improve. It should not become the main thing in the repository unless the
+repository itself is about designing the scaffold.
+
+You should expect to adapt it.
+The important thing is to adapt it consciously, so the project can still tell
+which parts are deliberate local choices and which parts are just inherited
+defaults.
+
 ## What To Aim For First
 
 Your first adoption should make these things clearer:
@@ -110,3 +126,28 @@ For many projects, the first useful version only needs:
 
 You do not need a complex orchestration system before the work itself becomes
 complex enough to require one.
+
+## Selection Rule
+
+Choose scaffold parts based on recurring coordination problems, not on the full
+set of available concepts.
+
+Use the minimal baseline when you mainly need:
+
+- clearer task ownership
+- explicit verification before completion
+- lightweight continuity across sessions
+- a durable place for structural decisions
+
+Add more only when a recurring problem appears, such as:
+
+- repeated confusion about what counts as done
+- repeated handoff failures across roles
+- repeated need for reusable verification definitions
+- repeated need for repository-wide workflow conventions
+- repeated need for visible escalation, approval, or expertise thresholds
+
+If a scaffold file or module does not solve a real recurring problem in the
+project, leave it out for now.
+If you do change the scaffold, make the reason visible so the change reads as a
+deliberate local adaptation rather than accidental drift.

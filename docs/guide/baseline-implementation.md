@@ -93,11 +93,12 @@ A practical baseline can start with:
 
 ```text
 AGENTS.md
-SYSTEM_MODEL.md
-PLAN.md
-PROGRESS.md
-history/
-  decisions/
+scaffold/
+  SYSTEM_MODEL.md
+  PLAN.md
+  PROGRESS.md
+  history/
+    decisions/
 ```
 
 Use that set to answer:
@@ -109,8 +110,14 @@ Use that set to answer:
 - what trace is preserved
 - where durable rationale is recorded
 
-Add `step_spec`, `step_review`, periodic review, workflow, or coding-standard
-templates only when the project needs that extra structure.
+For many coding-oriented repositories, this grouped layout is easier to live
+with than putting every harness file at the repository root.
+`AGENTS.md` can stay at the top level as the entry point, while the rest of
+the harness remains together in one visible place.
+
+Add `step_spec`, `verification_contract`, `step_review`, periodic review,
+workflow, or coding-standard templates only when the project needs that extra
+structure.
 
 ## What Belongs In Baseline Guidance
 
@@ -162,3 +169,11 @@ Good baseline guidance should let a builder say:
 - I know which changes are local implementation choices
 
 If the baseline makes those boundaries harder to see, it is too prescriptive.
+
+The same rule applies to repository footprint.
+If a baseline adoption causes scaffold files to overshadow the project's actual
+code, research, design, or operating artifacts, the baseline is being applied
+too literally.
+
+A good baseline should help a builder add the smallest useful harness around
+the work that already matters.
