@@ -69,6 +69,8 @@ Current interpretation:
 - `starter_kit` is a working reference implementation
 - `starter_kit` is a migration aid for older document-structured workflows
 - `starter_kit` is one source from which reusable patterns have been extracted
+- the local `docs/reference/starter_kit/` copy is the authoritative in-repo
+  reference source for this repository's reference layer
 
 This means it should not be treated as:
 
@@ -83,6 +85,10 @@ Related materials:
 - reduced example:
   [../examples/structured-project-starter/README.md](../examples/structured-project-starter/README.md)
 
+Retained legacy context:
+
+- nested legacy subtree: `docs/reference/starter_kit/v1/`
+
 ## Reference Layer Rules
 
 The reference layer should:
@@ -96,6 +102,10 @@ The reference layer should not:
 - silently define the standard
 - become the default builder onboarding path
 - accumulate unrelated archives without clear relevance
+
+Keep the retained reference layer small.
+If a reference source stops serving extraction, migration, or provenance
+value, reconsider whether it still belongs here.
 
 ## Current Note
 

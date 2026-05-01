@@ -75,6 +75,10 @@ This repository should distinguish between three related but different things:
 That distinction matters because a domain harness may extend the standard
 substantially without redefining the standard itself.
 
+For the boundary between the open standard and open, proprietary, or
+third-party domain implementations, see
+[../../history/decisions/0012-open-standard-supports-open-and-proprietary-domain-implementations.md](../../history/decisions/0012-open-standard-supports-open-and-proprietary-domain-implementations.md).
+
 ## Core Module Map
 
 The current conceptual map of the standard has two layers: core modules and

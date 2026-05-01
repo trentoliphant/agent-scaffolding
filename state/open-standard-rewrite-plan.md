@@ -11,7 +11,7 @@ definition itself.
 
 - overall status: in progress
 - current phase: baseline implementation alignment
-- current focus: first promoted domain extension pattern
+- current focus: selective extraction and stability maintenance
 
 ## Completed
 
@@ -71,21 +71,37 @@ The following clarification work is complete for this initiative:
   patterns
 - `design_model/` and `research_model/` have been explicitly retained as
   incubating extraction sources rather than near-term promoted examples
+- the optional `verification_contract` template has been added as the first
+  reusable extraction from the promoted example set
+- a post-verification review has concluded that no further reusable extension
+  artifact is clearly justified yet
+- a material-status review has confirmed that the current classifications
+  broadly hold and mainly need sharper wording rather than large
+  reclassification
+- a repository-boundary review has concluded that the standard, baseline,
+  curated examples, selected references, and incubating extraction sources
+  should remain co-located for now
+- contributor guidance has been sharpened for how standard, guide, example,
+  template, reference, incubating, state, and decision work should differ
+  inside the one-repo structure
+- a release-versioning review has concluded that the standard should remain
+  narratively versioned for now
+- a reference-retention review has concluded that the current reference and
+  migration set should remain in-repo for now
 
 ## Remaining Work
 
 The main work still remaining in this initiative is:
 
-- use the completed curated example set and incubating extraction sources to
-  decide what reusable extension artifacts should come next
+- maintain the current builder path while widening the standard, template,
+  example, or reference surface only when a real reusable need appears
 
 ## Next Step
 
 The immediate next step is:
 
-1. review the completed example set for reusable template, guide, or decision
-   gaps, then mine incubating extraction sources only where those gaps are
-   real
+1. hold the current structure steady and revisit expansion only when repeated
+   builder or contributor pressure shows a real gap
 
 Use this decision rule:
 
@@ -130,6 +146,8 @@ The main architecture questions to resolve are:
    rather than rewritten into the new baseline directly?
 3. When baseline work reveals a gap, what threshold justifies promoting that
    gap back into the standard core?
+4. Which future pressures would justify widening or restructuring the current
+   standard and support surface?
 
 ## Proposed Work Sequence
 

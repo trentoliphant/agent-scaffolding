@@ -53,6 +53,19 @@ If you are a builder:
 - use [docs/guide/starter-kit-adoption.md](docs/guide/starter-kit-adoption.md)
   only if you want to learn from or migrate older starter-kit-derived patterns
 
+The practical default is to adopt only the smallest useful harness for your
+project.
+Do not assume you should reproduce the full repository structure inside a
+working software, research, or design project.
+The scaffold should support the project's primary artifacts, not dominate them.
+You should also expect to adapt the scaffold to the project.
+The main discipline is to do that deliberately, so your local use stays easy to
+understand later.
+
+For many coding projects, that means keeping `AGENTS.md` at the repository root
+and grouping the rest of the scaffold in a single directory rather than
+spreading harness files across the top level.
+
 If you are contributing to this repository:
 
 - read [CONTRIBUTING.md](CONTRIBUTING.md)
@@ -108,6 +121,7 @@ The standard currently emphasizes reusable structure for:
 - it is not one proprietary domain implementation
 - it is not tied to one model provider or execution engine
 - it is not a complete marketplace of domain harnesses
+- it is not a command to copy every scaffold file into every project
 
 ## Standard, Baseline Implementation, And Domain Implementations
 
@@ -122,6 +136,22 @@ This repository is increasingly organized around a three-part distinction:
 
 That distinction matters because the standard should remain stable enough to
 support many implementations without collapsing into any one of them.
+
+For the boundary between the open standard and open, proprietary, or
+third-party domain implementations, see
+[history/decisions/0012-open-standard-supports-open-and-proprietary-domain-implementations.md](history/decisions/0012-open-standard-supports-open-and-proprietary-domain-implementations.md).
+
+For the current repository-boundary choice, see
+[history/decisions/0014-standard-baseline-and-curated-supporting-materials-stay-co-located-for-now.md](history/decisions/0014-standard-baseline-and-curated-supporting-materials-stay-co-located-for-now.md).
+The repository intentionally keeps the standard, baseline path, curated
+examples, selected references, and incubating extraction sources together for
+now, while preserving different status labels inside that shared location.
+
+For the current release stance, see
+[history/decisions/0015-standard-remains-narratively-versioned-until-release-pressure-is-real.md](history/decisions/0015-standard-remains-narratively-versioned-until-release-pressure-is-real.md).
+The repository currently uses `Current` materials, decision records, and
+active-state documents as its stability signals rather than formal release
+tags.
 
 ## Repository Navigation
 
@@ -139,6 +169,9 @@ Use the repository in this order when you need the cleanest path:
 The status index for those categories lives in
 [docs/guide/repository-status.md](docs/guide/repository-status.md).
 
+If you are unsure which files are current, use that guide rather than
+inferring status from repository location alone.
+
 ## Repository Map
 
 - `docs/scaffolding/` defines the standard itself
@@ -152,36 +185,7 @@ The status index for those categories lives in
 - `AGENTS.md` defines how agents should work in this repository
 - `CONTRIBUTING.md` defines how humans and agents should evolve the repository
 
-## Current Status
-
-The repository is in the middle of a deliberate rewrite.
-
-The core scaffolding definition has been reframed around the open-standard
-direction, and the builder path is being updated to match that framing.
-
-Some older materials still reflect:
-
-- the earlier coding-oriented center of gravity
-- the starter-kit integration phase
-- older terminology such as `review types`
-
-Those materials remain useful as reference or migration aids, but they should
-not be mistaken for the final shape of the standard.
-
-## Current Vs Transitional Material
-
-The easiest way to understand what is current versus still in transition is:
-
-- current builder and contributor surface:
-  [docs/scaffolding/](/Users/trentoliphant/Development/openteams/agent-scaffolding/docs/scaffolding),
-  [docs/guide/start-here.md](/Users/trentoliphant/Development/openteams/agent-scaffolding/docs/guide/start-here.md),
-  [docs/guide/baseline-implementation.md](/Users/trentoliphant/Development/openteams/agent-scaffolding/docs/guide/baseline-implementation.md),
-  [docs/guide/minimal-adoption.md](/Users/trentoliphant/Development/openteams/agent-scaffolding/docs/guide/minimal-adoption.md),
-  [CONTRIBUTING.md](/Users/trentoliphant/Development/openteams/agent-scaffolding/CONTRIBUTING.md),
-  and [state/current.md](/Users/trentoliphant/Development/openteams/agent-scaffolding/state/current.md)
-- classification index:
-  [docs/guide/repository-status.md](/Users/trentoliphant/Development/openteams/agent-scaffolding/docs/guide/repository-status.md)
-
-Materials marked `Transitional`, `Reference/Migration`, `Legacy`, or
-`Incubating` may still be useful, but they should not be mistaken for the
-current standard core.
+`design_model/` and `research_model/` remain at the repository root as
+incubating extraction sources from an earlier phase, not as current builder
+entry points. Use [docs/guide/repository-status.md](docs/guide/repository-status.md)
+if you need to confirm their status.

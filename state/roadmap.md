@@ -6,26 +6,24 @@ It is a planning aid, not a durable definition of the scaffold. Items here may c
 
 ## Near Term
 
-1. Add integration guidance for common execution systems while preserving
-   model and engine agnosticism
-2. Define how domain implementations should extend the standard and contribute
-   improvements back safely
-3. Refresh or reclassify remaining transitional materials that still carry
-   older coding-first or starter-kit-derived framing
-4. Decide whether the standard, baseline implementation, and domain
-   implementations should remain in one repository or later split
+1. Refresh or reclassify remaining transitional, reference, and incubating
+   materials that still carry older coding-first or starter-kit-derived
+   framing
+2. Revisit repository split only if the one-repo decision's triggers appear
+3. Revisit explicit release tags only if the narrative-versioning decision's
+   triggers appear
+4. Continue selective extraction only when repeated builder need justifies it
 
 ## Medium Term
 
-1. Extract templates or sharper guide material from the completed curated
-   example set when repeated builder need justifies it
-2. Add more promoted extension artifacts only if future builder pressure
+1. Add more promoted extension artifacts only if future builder pressure
    exposes a need not addressed by the current example set
-3. Create a contribution model that welcomes domain experts without weakening
-   the standard's coherence
-4. Evaluate whether older reference and migration materials should remain in
+2. Extract sharper guide or template material from incubating sources only
+   when a real cross-domain gap appears
+3. Evaluate whether older reference and migration materials should remain in
    this repository long term
-5. Decide what release or versioning shape the open standard should use
+4. Revisit whether any domain implementation deserves promotion beyond the
+   current teaching-oriented example set
 
 ## Watch Items
 

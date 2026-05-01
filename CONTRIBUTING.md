@@ -19,6 +19,28 @@ Builders are the primary audience for the standard itself.
 Contributor-facing refinement matters, but it should support the builder path
 rather than overwhelm it.
 
+## One-Repo Working Model
+
+This repository intentionally keeps several material types together for now:
+
+- standard definition
+- builder guidance
+- teaching-oriented examples
+- baseline implementation assets
+- reference and migration material
+- incubating extraction sources
+
+That co-location is a convenience for builders and contributors.
+It is not permission to treat all material as equally current or equally
+authoritative.
+
+Use [docs/guide/repository-status.md](docs/guide/repository-status.md) to
+check whether the material you are editing is `Current`, `Transitional`,
+`Reference/Migration`, `Legacy`, or `Incubating`.
+
+When in doubt, preserve the current builder path first and treat supporting
+materials as context, not as silent source of truth.
+
 ## Before You Change Something
 
 Start by locating the correct layer for the change:
@@ -38,6 +60,19 @@ Also check [docs/guide/repository-status.md](docs/guide/repository-status.md)
 when the status of a document is relevant to your change. Avoid treating
 `Transitional`, `Reference/Migration`, `Legacy`, or `Incubating` materials as
 if they were automatically current source of truth.
+
+Before editing, identify which contribution type you are making:
+
+- standard change
+- guide change
+- example change
+- template change
+- reference or migration change
+- incubating extraction work
+- state or planning update
+- decision-record update
+
+If you cannot name the change type clearly, narrow the change before you edit.
 
 ## Core Expectations
 
@@ -88,18 +123,176 @@ Use the following heuristic:
 - add a decision record when repository structure or interpretation changes in a
   durable way
 
+## Change Ownership By Layer
+
+Use these working rules when deciding how to change a layer.
+
+### Standard Changes
+
+Standard changes belong in `docs/scaffolding/`.
+
+They should:
+
+- define reusable cross-domain structure
+- remain model-agnostic and execution-system-agnostic
+- avoid borrowing domain-specific wording unless it is generalized first
+
+They should not:
+
+- be justified only by one example, one company need, or one reference source
+- import local workflow conventions as if they were part of the core standard
+
+### Guide Changes
+
+Guide changes belong in `docs/guide/`.
+
+They should:
+
+- make adoption, extension, or interpretation easier for builders
+- explain how to apply the standard without redefining it
+
+They should not:
+
+- quietly become new standard definition
+- depend on one example or reference source without saying so
+
+### Example Changes
+
+Example changes belong in `docs/examples/`.
+
+They should:
+
+- stay teaching-oriented
+- answer a builder question that benefits from a concrete application
+- map back to the shared standard categories visibly
+
+They should not:
+
+- become a broad catalog of domain implementations
+- introduce a promoted example unless the current set leaves a real builder gap
+
+### Template Changes
+
+Template changes belong in `templates/`.
+
+They should:
+
+- improve the baseline implementation path
+- stay smaller and more portable than full reference-source material
+
+They should not:
+
+- turn domain-specific practice into a baseline default without repeated need
+- be added just because a source document exists elsewhere in the repository
+
+### Reference Or Migration Changes
+
+Reference and migration changes belong in `docs/reference/` and related
+translation guides.
+
+They should:
+
+- preserve source material accurately enough to remain useful
+- help contributors trace where patterns came from
+- help builders migrate older material when needed
+
+They should not:
+
+- silently redefine current source of truth
+- be rewritten into current guidance without an explicit extraction step
+
+### Incubating Extraction Work
+
+Incubating work usually starts from `design_model/` or `research_model/`.
+
+It should:
+
+- identify a reusable gap in the current builder path first
+- extract the smallest useful artifact into a guide, template, example, or
+  decision record
+- preserve the incubating source unless there is a strong reason to do
+  otherwise
+
+It should not:
+
+- promote an incubating directory wholesale into the current builder path
+- widen the baseline just because the incubating source is thoughtful or rich
+
+### State And Decision Updates
+
+State updates belong in `state/`.
+Decision records belong in `history/decisions/`.
+
+Use `state/` for:
+
+- active frontier
+- open questions
+- working review notes
+
+Use `history/decisions/` for:
+
+- durable structural choices
+- durable interpretation changes
+- tradeoffs future contributors should not have to rediscover
+
+Do not leave durable repository-boundary changes only in `state/`.
+
+## Allowed Change Bundles
+
+Some multi-file changes are healthy and expected.
+
+Common good bundles include:
+
+- standard plus guide updates when guidance must catch up to a clarified
+  concept
+- guide plus example updates when a builder-facing explanation needs a concrete
+  illustration
+- template plus guide updates when baseline assets change
+- decision record plus state updates when a durable structural choice changes
+- extraction work plus source-preserving notes when a reference or incubating
+  pattern is promoted carefully
+
+Be cautious with bundles like:
+
+- standard plus reference rewrites in one step
+- promoted example additions plus baseline template expansion in one step
+- reference or incubating edits presented as if they were current builder-path
+  changes
+
+If a change crosses multiple layers, say why each layer changed.
+
+## Extraction Workflow
+
+When working from `docs/reference/`, `design_model/`, or `research_model/`:
+
+1. Identify the builder or contributor need first.
+2. Identify the reusable pattern inside the source.
+3. Decide the target layer:
+   - `docs/scaffolding/` for standard concepts
+   - `docs/guide/` for application guidance
+   - `docs/examples/` for teaching-oriented illustration
+   - `templates/` for baseline implementation assets
+   - `history/decisions/` for durable interpretation
+4. Extract the smallest artifact that solves the need.
+5. Preserve the source material as reference or incubating material unless a
+   separate cleanup decision is justified.
+
+This repository should evolve by selective extraction, not by relabeling older
+material as current.
+
 ## Contributor Workflow
 
 1. Read the relevant files before changing them.
 2. Read [state/current.md](state/current.md) if you are resuming repository
    work from a clean session.
-3. Make the smallest coherent change that advances the repository.
-4. Update neighboring documents if the meaning or structure changed.
-5. Add a decision record when the repository's structure or interpretation
+3. Identify the change type and the target layer before editing.
+4. Make the smallest coherent change that advances the repository.
+5. Update neighboring documents if the meaning or structure changed.
+6. Add a decision record when the repository's structure or interpretation
    changes materially.
-6. Update `state/current.md`, `state/roadmap.md`, or the active plan file if
+7. Update `state/current.md`, `state/roadmap.md`, or the active plan file if
    the active frontier changed.
-7. Review the result from both the builder and contributor perspective.
+8. Review the result from both the builder and contributor perspective.
 
 ## Repository Workflow Preferences
 
@@ -136,6 +329,9 @@ Before considering a change complete, ask:
 - Have important reasons been documented rather than left implicit?
 - Has the change kept the open standard distinct from one specific
   implementation pattern?
+- Would a later contributor understand whether this was a standard update,
+  a builder-path update, a teaching example, a source-preserving reference
+  change, or an incubating extraction?
 
 ## Decision Records
 
