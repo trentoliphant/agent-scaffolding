@@ -44,6 +44,8 @@ Additional templates are available when the implementation needs more
 structure:
 
 - `step_spec.template.md` for a fuller unit-of-work contract
+- `verification_contract.template.md` for defining one reusable verification
+  contract
 - `step_review.template.md` for a fuller verification record
 - `periodic_review.template.md` for the self-evolution loop
 - `workflow_standards.template.md` for local promotion and repository workflow
@@ -66,6 +68,7 @@ For the current baseline path, classify the `core/` templates as follows:
 | `progress.template.md` | Keep | Provides lightweight session state and task-cycle visibility. |
 | `history.template.md` | Keep | Preserves durable observations and follow-ups when a full decision record would be too heavy. |
 | `step_spec.template.md` | Keep | Defines a portable unit-of-work contract with role, verification, and trace expectations. |
+| `verification_contract.template.md` | Keep | Gives builders a compact reusable way to define one local verification contract before it is applied in reviews. |
 | `step_review.template.md` | Keep | Maps older review language onto the current verification-record model. |
 | `periodic_review.template.md` | Keep | Supports the self-evolution loop by turning repeated trace and verification evidence into reviewed proposals. |
 | `workflow_standards.template.md` | Keep | Provides optional local promotion and repository workflow rules without making them standard core. |
@@ -83,7 +86,9 @@ Use templates as follows:
 2. Rename or trim files to fit your local implementation.
 3. Add domain modules, expertise profiles, or runtime integration guidance only
    when needed.
-4. Do not assume every template belongs in every project.
+4. Add reusable verification-contract definitions when local review criteria
+   would otherwise be reconstructed repeatedly from prose.
+5. Do not assume every template belongs in every project.
 
 Use [../docs/guide/domain-implementation-extensions.md](../docs/guide/domain-implementation-extensions.md)
 when you need to add domain-specific modules around the templates.

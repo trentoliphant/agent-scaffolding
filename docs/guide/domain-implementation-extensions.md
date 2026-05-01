@@ -24,6 +24,32 @@ Good extension guidance should help a builder answer:
 - what belongs in domain modules instead of the standard core
 - what should be promoted back into the standard only after repeated reuse
 
+## Open, Proprietary, And Third-Party Implementations
+
+A domain implementation may be:
+
+- open and published with the standard
+- proprietary or internal to one organization
+- maintained by a partner or third party outside this repository
+
+Those publication differences do not change the structural rule.
+
+What matters is whether the implementation keeps its mapping back to the
+shared standard visible enough to recover:
+
+- roles
+- tasks
+- verification contracts
+- orchestration
+- trace expectations
+- session state
+- durable decisions
+
+Do not treat one company's local implementation as a silent update to the
+standard core.
+Promote a pattern into the standard only when it solves a reusable
+cross-domain problem.
+
 ## What A Domain Implementation May Add
 
 A domain implementation may add:
@@ -101,6 +127,13 @@ These belong in domain verification modules when they define:
 - what criteria apply
 - what verdicts are possible
 - what next action each verdict triggers
+
+If the same contract will be reused across multiple tasks or artifacts, define
+it as a local reusable artifact rather than reconstructing it from review
+notes each time.
+The optional
+[`verification_contract.template.md`](../../templates/core/verification_contract.template.md)
+is the compact baseline shape for doing that.
 
 ### Domain Trace Fields
 

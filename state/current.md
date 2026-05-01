@@ -13,8 +13,20 @@ If you are resuming work in a clean session, start in this order:
    when evaluating whether `research_model/` should yield a guide or template.
 5. Use [investigative-step-template-evaluation.md](investigative-step-template-evaluation.md)
    when evaluating whether research-heavy work now needs a template variant.
-6. Use [example-set-gap-review.md](example-set-gap-review.md) when deciding
-   whether the completed example set implies a reusable extraction.
+6. Use [example-set-gap-review.md](example-set-gap-review.md) for the
+   pre-extraction rationale that led to the optional
+   `verification_contract` template.
+7. Use [post-verification-example-set-review.md](post-verification-example-set-review.md)
+   when deciding whether any further reusable extraction is justified now.
+8. Use [material-status-review.md](material-status-review.md) when deciding
+   whether repository classifications need further rework before boundary
+   decisions.
+9. Use [repository-boundary-review.md](repository-boundary-review.md) for the
+   option comparison that led to the current one-repo decision.
+10. Use [release-versioning-review.md](release-versioning-review.md) for the
+    option comparison that led to the current narrative-versioning decision.
+11. Use [reference-retention-review.md](reference-retention-review.md) for the
+    option comparison that led to the current retained reference-layer set.
 
 ## Current Objective
 
@@ -27,7 +39,7 @@ or guardrails that can support mixed human and machine agent systems.
 - active initiative record: [open-standard-rewrite-plan.md](open-standard-rewrite-plan.md)
 - most recently completed initiative: starter-kit integration
 - completed initiative record: [starter-kit-integration-plan.md](starter-kit-integration-plan.md)
-- current focus: first promoted domain extension pattern
+- current focus: selective extraction and stability maintenance
 
 ## Current Status
 
@@ -57,6 +69,15 @@ The repository currently has:
 - the baseline guide, minimal adoption guide, minimal example, template index,
   start-here guide, and repository-status guide checked as one coherent
   builder path
+- builder guidance sharpened to state that the scaffold should remain selective
+  and subordinate to the primary project artifacts rather than dominating a
+  working repository
+- builder guidance sharpened further to frame scaffold modification as expected
+  when done deliberately and legibly, rather than as something builders should
+  avoid by default
+- builder guidance updated to suggest a practical coding-project layout where
+  `AGENTS.md` stays at the repository root and the rest of the harness can
+  live in one local scaffold directory
 - the software-project example refreshed as a coding-focused scaling example
   aligned with the current baseline path
 - roadmap refreshed around remaining post-baseline-alignment work
@@ -79,6 +100,27 @@ The repository currently has:
   justified
 - a gap review recorded that the strongest repeated optional artifact shape is
   a verification-contract definition artifact
+- an optional `verification_contract` template added to the baseline template
+  set as the first reusable extraction from the completed promoted example set
+- a post-verification review recorded that no further reusable extension
+  artifact is clearly justified yet
+- a material-status review recorded that the current classifications still
+  broadly hold, with sharper wording needed around partially current
+  directories and co-located materials
+- a decision recorded that the open standard can support open, proprietary,
+  and third-party domain implementations without treating any one of them as
+  the standard by default
+- a decision recorded to keep the standard, baseline, curated examples,
+  selected references, and incubating extraction sources co-located in this
+  repository for now
+- contributor guidance in `CONTRIBUTING.md` sharpened to distinguish standard,
+  guide, example, template, reference, incubating, state, and decision work
+  inside the one-repo structure
+- a decision recorded to keep the standard narratively versioned for now and
+  wait for real release pressure before adding formal tags
+- a decision recorded to keep the current reference and migration set in this
+  repository for now, including the local `starter_kit` copy as the
+  authoritative in-repo reference source
 - AI-team templates explicitly kept as an advanced extension
 - experiment templates explicitly kept as a specialized extension
 - the current imported starter set explicitly treated as the default builder path
@@ -102,48 +144,43 @@ the next builder-facing frontier is underway.
 
 The next task to work on is:
 
-1. use the first promoted domain-extension pattern to decide what reusable
-   extension artifact should come next
+1. maintain the current builder path and widen the standard or reference
+   surface only when real builder or contributor pressure appears
 
 ## Active Priorities
 
 The next useful improvements are:
 
-1. evaluate which additional extension patterns deserve examples, templates, or
-   decision records next
-2. decide whether the completed example set suggests a guide, template, or
-   decision gap
-3. extract reusable material from incubating sources only when the current
-   example set reveals a real gap
-4. keep the user or builder path primary while making contributor standards
-   explicit
-5. decide how the open standard relates structurally to proprietary or
-   third-party domain implementations
+1. continue extracting reusable material from incubating sources only when a
+   real builder gap appears
+2. refresh wording when needed so co-located materials are not mistaken for
+   one builder path
+3. revisit repository boundary only if the split triggers named in
+   `history/decisions/0014` begin to appear
+4. revisit explicit release tags only if the triggers named in
+   `history/decisions/0015` begin to appear
 
 ## Open Questions
 
 The main unresolved questions currently are:
 
-1. Which extension patterns should remain guide-only, and which now deserve
-   templates or decision records after the curated example set is in place?
-2. Should the standard and the baseline implementation live in this repository
-   together, or should they later separate from domain implementations into
-   multiple repositories?
-3. Which existing materials should be preserved as reference or migration aids
-   rather than rewritten into the new standard directly?
+1. What repeated builder pressure, if any, would justify another promoted
+   example, optional template, or guide extraction?
+2. Which future signals should cause the repository to move from narrative
+   versioning to explicit releases or tags?
+3. Which future signals should cause the repository to revisit the one-repo
+   boundary?
 
 ## Immediate Next Actions
 
 The most reasonable next work items are:
 
-1. review whether any current example exposes a reusable template need
-2. review whether any example exposes a missing guide or decision record
-3. review `design_model/` and `research_model/` only for selective extraction
-   candidates that fill uncovered builder needs
-4. wait for repeated builder pressure before adding any investigative-step
-   template appendix or variant
-5. decide whether to extract an optional verification-contract template as the
-   next reusable artifact
+1. wait for repeated builder pressure before adding further templates or
+   promoted extension artifacts
+2. revisit the repository-boundary decision only if the split triggers named
+   in `history/decisions/0014` begin to appear
+3. revisit the narrative-versioning decision only if the triggers named in
+   `history/decisions/0015` begin to appear
 
 ## Known Constraints
 
