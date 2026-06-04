@@ -1,5 +1,10 @@
 # STARTER KIT FILE INVENTORY
 
+> Status: Reference/Migration
+> Alignment: Preserved as a reference source, not aligned as current standard core
+> Intended role: extraction source and migration aid
+> Use it for: learning from older patterns or migrating older workflows
+
 ## Purpose
 
 This document provides a concise inventory of the starter kit files,

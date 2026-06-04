@@ -1,5 +1,10 @@
 # DESIGN STANDARDS
 
+> Status: Incubating
+> Alignment: Not yet aligned with the current open-standard rewrite
+> Intended role: earlier design-domain adapter material
+> Use it for: reference or future integration work, not as current standard core
+
 ## Purpose
 
 This document defines standards for design artifacts, design steps, and

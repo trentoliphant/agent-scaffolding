@@ -1,5 +1,10 @@
 # STARTER KIT DIRECTORY TREE
 
+> Status: Reference/Migration
+> Alignment: Preserved as a reference source, not aligned as current standard core
+> Intended role: extraction source and migration aid
+> Use it for: learning from older patterns or migrating older workflows
+
 ## Purpose
 
 This document is the canonical file and directory inventory for the

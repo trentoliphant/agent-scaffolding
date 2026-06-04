@@ -1,17 +1,28 @@
-# Customizing The Scaffold
+# Customizing The Standard
 
-Use this guide when the base scaffold is helpful but your project needs adaptation.
+Use this guide when the base standard is helpful but your project needs local
+adaptation.
 
-## Preserve The Core Distinctions
+The standard is meant to be modular. Customization is expected. The key is to
+extend it deliberately so the resulting project stays clear, portable, and
+reviewable.
 
-Customization should not erase distinctions that are doing useful work.
+This is not a guide against changing the scaffold.
+It is a guide for changing your use of the scaffold consciously enough that the
+project can explain its own local choices later.
+
+## Customize Deliberately
+
+When you customize, try to keep useful distinctions visible unless you have a
+reason to merge them.
 
 Try to preserve:
 
+- standard definition vs implementation guidance
 - roles vs tasks
-- review types vs roles
-- system definition vs project guidance
-- session state vs history and decisions
+- execution vs verification
+- session state vs traces vs history and decisions
+- core modules vs optional extensions
 
 If you merge concepts, do it deliberately and explain why.
 
@@ -19,38 +30,83 @@ If you merge concepts, do it deliberately and explain why.
 
 Customize when:
 
-- your domain requires a role the base examples do not show
-- your project has recurring review needs
-- your orchestration needs explicit routing or escalation
-- your team needs a different level of detail
+- your domain needs roles the baseline examples do not show
+- your project needs domain-specific verification criteria
+- your workflow needs explicit routing, escalation, or approval rules
+- your implementation needs expertise tiers with different autonomy levels
+- your runtime needs explicit integration guidance
+- your project needs compliance, privacy, or audit overlays
 
 ## Common Safe Customizations
 
 Common adaptations include:
 
 - renaming example roles to fit a domain
-- adding review types such as security, compliance, or usability
+- assigning a role to a human, a machine, or a mixed loop
+- adding verification contracts such as security, compliance, or usability
+- defining autonomy profiles such as junior, regular, and senior
 - adding a lightweight session-state file for multi-session work
-- creating examples that reflect the real workflow of a project
-- starting from the imported templates and trimming them down for local needs
+- adding trace fields that matter in a specific runtime or domain
+- starting from the templates and trimming them down for local needs
+
+The goal is not to keep every inherited shape untouched.
+The goal is to make your modifications look intentional rather than accidental.
+
+## Adding Expertise Tiers
+
+Add expertise tiers when the same role may carry different decision rights in
+different assignments.
+
+For each tier, define:
+
+- what work it may complete independently
+- what work requires review before completion
+- what uncertainty, risk, or scope must be escalated
+- which verification contracts apply before the work can be accepted
+
+Keep the tier separate from the role.
+
+For example, `senior reviewer` may be a reviewer role assignment with a senior
+expertise profile. The reviewer role still defines responsibility, the senior
+profile defines autonomy, and the verification contract defines the criteria.
 
 ## Changes That Need Extra Care
 
 Be careful when:
 
-- collapsing review into implementation
+- collapsing verification into execution
+- hiding trace requirements inside role descriptions
 - turning temporary working notes into durable principles
-- using examples as if they define the whole system
-- creating new terms for concepts that already exist clearly
+- treating one domain module as if it defines the whole standard
+- creating new terms for concepts that are already clear
+- baking one runtime or model provider into the standard core
 
 ## Practical Heuristic
 
 Before customizing, ask:
 
 1. What problem is this change solving?
-2. What layer does it belong to?
+2. Is this a core concept, an extension, or an implementation detail?
 3. Is the change durable or temporary?
-4. Will the change make the system easier to use?
-5. Will the change make the system harder to understand later?
+4. Will the change make the harness easier to use?
+5. Will the change make the harness harder to transfer or inspect later?
 
-If the answer to the last question is yes, add documentation that makes the customization recoverable.
+If the answer to the last question is yes, add documentation that makes the
+customization recoverable.
+
+## Common Extension Categories
+
+The most common extension categories are:
+
+- autonomy or expertise profiles
+- domain verification modules
+- runtime integration profiles
+- workflow standards for a specific repository or organization
+- regulated-domain overlays
+
+These are valuable, but they should be added in a way that keeps the local
+change visible rather than making the scaffold drift silently.
+
+Use [domain-implementation-extensions.md](domain-implementation-extensions.md)
+when you need a fuller guide for turning those categories into a coherent
+domain implementation.

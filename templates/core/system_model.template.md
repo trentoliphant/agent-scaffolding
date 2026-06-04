@@ -1,8 +1,9 @@
-# SYSTEM MODEL — [Project Name]
+# SYSTEM OR HARNESS MODEL — [Project Name]
 
 ## Purpose
 
-Describe what the system is, what it is for, and the overall design intent.
+Describe what the system or harness is, what it is for, and the overall design
+intent.
 
 ---
 
@@ -14,7 +15,7 @@ High-level description of the project and intended outcome.
 
 ## Core responsibilities
 
-List the major responsibilities of the system.
+List the major responsibilities of the system or harness.
 
 - Responsibility 1
 - Responsibility 2
@@ -22,9 +23,9 @@ List the major responsibilities of the system.
 
 ---
 
-## Architectural boundaries
+## Boundaries
 
-Define major component boundaries and separations of concern.
+Define major component or responsibility boundaries and separations of concern.
 
 - Boundary 1
 - Boundary 2
@@ -42,9 +43,9 @@ These must remain true unless explicitly reconsidered.
 
 ---
 
-## Key abstractions
+## Key abstractions or roles
 
-Describe important abstractions, interfaces, or conceptual models.
+Describe important abstractions, interfaces, conceptual models, or roles.
 
 ### [Abstraction Name]
 - Purpose
@@ -55,11 +56,22 @@ Describe important abstractions, interfaces, or conceptual models.
 
 ## Data / state model
 
-Describe the important stateful structures, records, or entities.
+Describe the important stateful structures, records, entities, or tracked
+state.
 
 - Entity 1
 - Entity 2
 - Entity 3
+
+---
+
+## Verification and trace expectations
+
+Describe any global expectations for:
+
+- what kinds of outputs require verification
+- what high-level criteria apply
+- what trace information must be preserved
 
 ---
 
@@ -93,9 +105,9 @@ Treat the following as architectural issues rather than local implementation iss
 
 ---
 
-## Code / implementation standards references
+## Standards references
 
-Reference broader standards that apply across the project.
+Reference broader standards that apply across the project or harness.
 
 - `CODING_STANDARDS.md`
 - `WORKFLOW_STANDARDS.md`

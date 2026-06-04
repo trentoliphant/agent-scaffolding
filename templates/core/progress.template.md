@@ -1,17 +1,16 @@
 # PROGRESS
 
-| Step | Description | Owner | Status | Notes |
-|------|-------------|-------|--------|-------|
-| 1.1 | [Description] | [Owner] | Not Started | |
-| 1.2 | [Description] | [Owner] | Not Started | |
-| 1.3 | [Description] | [Owner] | Not Started | |
+| Task | Description | Role | Actor | Status | Verification | Trace | Notes |
+|------|-------------|------|-------|--------|--------------|-------|-------|
+| 1.1 | [Description] | [Role] | [Human, machine, or mixed] | Not Started | Pending | Pending | |
+| 1.2 | [Description] | [Role] | [Human, machine, or mixed] | Not Started | Pending | Pending | |
+| 1.3 | [Description] | [Role] | [Human, machine, or mixed] | Not Started | Pending | Pending | |
 
 ## Status definitions
 
 - Not Started
 - In Progress
-- Agent Review
-- Machine Complete
-- Human Review
+- Pending Verification
+- Verification In Progress
 - Done
 - Blocked

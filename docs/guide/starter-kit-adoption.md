@@ -1,104 +1,114 @@
-# Starter Kit Adoption
+# Starter Kit Reference And Migration
 
-This guide explains how the `starter_kit` reference implementation relates to this scaffold and how to use it without confusing reference material, examples, and copyable assets.
+This guide explains how the older `starter_kit` reference implementation
+relates to the current standard rewrite.
 
-## Purpose
+Use this guide when:
 
-Use this guide when you want to:
+- you want to learn from the older starter-kit-derived workflow
+- you are migrating existing material that follows that shape
+- you want to extract useful patterns without treating the reference source as
+  the standard itself
 
-- understand how the `starter_kit` reference informs the scaffold
-- decide what to read first
-- choose between the full reference, the reduced example, and the imported templates
+This is no longer the default builder path.
 
-## Use The Right Layer
+## What `starter_kit` Is Now
 
-Use the reference source when you need:
+The `starter_kit` materials remain useful as:
 
-- the full original file set
-- the original naming and structure
-- the richest source for extracting patterns
+- a reference implementation
+- an extraction source for reusable patterns
+- a migration aid for older document-structured workflows
 
-Use the derived example when you need:
+They should not be treated as:
 
-- a smaller teaching-oriented view of the same workflow shape
-- a quick way to understand the main documents and their relationships
+- the open standard itself
+- the default baseline adoption path
+- the final answer for non-coding domains
 
-Use the imported templates when you need:
+## When To Use This Guide
 
-- copyable starter assets for a real project
-- a shorter path from scaffold understanding to practical adoption
+Use this guide if one of these is true:
 
-One terminology note:
+- your team already has documents shaped like `PLAN.md`, `PROGRESS.md`, and
+  `STEP_REVIEW.md`
+- you want a richer document workflow than the minimal baseline
+- you are porting older coding-oriented scaffold material into the new standard
+- you want to understand where some of the repository's template assets came
+  from
 
-- the current `templates/core/` set does not include a dedicated operating-model template
-- when a project needs explicit execution-governance documentation, use the reference source as the current pattern source
+If none of those are true, start with [start-here.md](start-here.md) and
+[minimal-adoption.md](minimal-adoption.md) instead.
 
 ## Current Sources
 
-- Full reference source: [../reference/starter_kit](../reference/starter_kit)
-- Reduced derived example: [../examples/structured-project-starter/README.md](../examples/structured-project-starter/README.md)
-- Imported core templates: [../../templates/core](/Volumes/Home/Users/trentoliphant/Development/personal/agent-scaffolding/templates/core)
+- full reference source: [../reference/starter_kit](../reference/starter_kit)
+- reduced derived example:
+  [../examples/structured-project-starter/README.md](../examples/structured-project-starter/README.md)
+- imported template set:
+  [templates/core](/Users/trentoliphant/Development/openteams/agent-scaffolding/templates/core)
 
-## Recommended Builder Path
+## How To Read The Older Material
 
-1. Read [start-here.md](start-here.md).
-2. Read [../examples/structured-project-starter/README.md](../examples/structured-project-starter/README.md).
-3. Copy from [../../templates/core](/Volumes/Home/Users/trentoliphant/Development/personal/agent-scaffolding/templates/core) if you want a working project starter.
-4. Consult [../reference/starter_kit](../reference/starter_kit) when you need the full source context or want to extract more patterns.
+Read the older material as one implementation pattern, not as the standard.
 
-## Concept Mapping
+The main translation is:
 
-The table below shows how scaffold concepts connect to the full reference source and the reduced example.
+- `OPERATING_MODEL.md` maps mostly to orchestration and workflow guidance
+- `SYSTEM_MODEL.md` maps to local system or harness definition
+- `PLAN.md` and `PROGRESS.md` map to local planning and session state
+- `STEP_REVIEW.md` maps to explicit verification structure
+- template and process documents map to implementation conventions, not to the
+  whole standard
 
-| Scaffold concept | Reference source | Derived example |
-|---|---|---|
-| Orchestration and execution rules | `process/OPERATING_MODEL.md` | `process/OPERATING_MODEL.md` |
-| Project orientation | `docs/PROJECT_OPERATIONS_INDEX.md` | `docs/PROJECT_OPERATIONS_INDEX.md` |
-| Project-level system definition | `templates/core/system_model.template.md` and project `docs/SYSTEM_MODEL.md` | `docs/SYSTEM_MODEL.md` |
-| Task sequencing | `templates/core/plan.template.md` and project `docs/PLAN.md` | `docs/PLAN.md` |
-| Current execution state | `templates/core/progress.template.md` and project `docs/PROGRESS.md` | `docs/PROGRESS.md` |
-| Preserved learning | `templates/core/history.template.md` and project `docs/HISTORY.md` | `docs/HISTORY.md` |
-| Unit-of-work contract | `templates/core/step_spec.template.md` and project `steps/step_X.Y_spec.md` | `steps/step_1.1_spec.md` |
-| Structured review | `templates/core/step_review.template.md` and project `reviews/STEP_REVIEW.md` | `reviews/STEP_REVIEW.md` |
-| Coding conventions | `templates/core/coding_standards.template.md` and project `docs/CODING_STANDARDS.md` | omitted in the reduced example |
-| Workflow conventions | `templates/core/workflow_standards.template.md` and project `docs/WORKFLOW_STANDARDS.md` | omitted in the reduced example |
+## Recommended Migration Approach
 
-## Minimal Copyable Template Set
+If you are migrating from starter-kit-derived material:
 
-The current imported template set is:
+1. Identify which documents express reusable standard concepts.
+2. Separate implementation conventions from standard-core concepts.
+3. Reframe review material as explicit verification contracts where helpful.
+4. Add or clarify trace expectations and the self-evolution loop.
+5. Keep older file shapes only when they still improve usability for your team.
 
-- `templates/core/system_model.template.md`
-- `templates/core/plan.template.md`
-- `templates/core/progress.template.md`
-- `templates/core/history.template.md`
-- `templates/core/step_spec.template.md`
-- `templates/core/step_review.template.md`
-- `templates/core/periodic_review.template.md`
-- `templates/core/coding_standards.template.md`
-- `templates/core/workflow_standards.template.md`
+## What Still Transfers Well
 
-This set is intentionally smaller than the full reference source.
+Useful patterns from the older material still include:
 
-At this stage:
+- explicit task decomposition
+- explicit state and progress tracking
+- separation of work artifacts from review artifacts
+- durable history of meaningful structural change
+- disciplined document updates for multi-session work
 
-- the current imported starter set is the default builder path
-- periodic review is included as part of the base starter set
-- AI-team templates remain deferred as an advanced extension
-- experiment templates remain deferred as a specialized extension
-- explicit operating-model material remains reference-sourced rather than part of the imported core template set
+## What Needs Care During Migration
 
-This is a deliberate decision, not just an implementation gap. See [../../history/decisions/0003-ai-team-templates-remain-advanced.md](../../history/decisions/0003-ai-team-templates-remain-advanced.md).
-The same is true for experiment templates. See [../../history/decisions/0004-experiment-templates-remain-specialized.md](../../history/decisions/0004-experiment-templates-remain-specialized.md).
-The current base set being sufficient as the default path is also deliberate. See [../../history/decisions/0005-current-starter-set-is-the-default-builder-path.md](../../history/decisions/0005-current-starter-set-is-the-default-builder-path.md).
+Be careful not to carry forward these assumptions without review:
+
+- coding-first terminology as if it were domain-neutral
+- repository workflow rules as if they were standard-core concepts
+- implicit verification criteria hidden inside role expectations
+- file layouts treated as if they were required by the standard
+
+## Templates And Reference Material
+
+The current `templates/core/` set remains available because it can still help
+teams bootstrap a structured baseline.
+
+However:
+
+- the templates should be treated as baseline implementation assets, not the
+  standard itself
+- older reference material may remain more prescriptive than the new standard
+- some imported templates may eventually be revised or reclassified as the
+  rewrite continues
 
 ## Adoption Rule
 
-Start from the templates when possible.
+Start from the minimal standard path when possible.
 
-Move to the reduced example when you need help understanding the workflow shape.
+Move to starter-kit-derived material only when:
 
-Move to the full reference source when:
-
-- you need the fuller document set
-- you want AI-team or experimental extensions later
-- you are extracting new scaffold patterns rather than just adopting the current starter
+- you need migration help
+- you need a richer document workflow immediately
+- you are extracting reusable patterns from older reference material

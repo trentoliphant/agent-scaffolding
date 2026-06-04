@@ -1,5 +1,10 @@
 # RESEARCH PLAN — [Project Name]
 
+> Status: Incubating
+> Alignment: Not yet aligned with the current open-standard rewrite
+> Intended role: earlier research-domain adapter material
+> Use it for: reference or future integration work, not as current standard core
+
 ## Overview
 
 This document defines the phases, sequencing, and steps for the research

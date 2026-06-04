@@ -1,22 +1,38 @@
-# PERIODIC REVIEW — [Project Name]
+# PERIODIC HARNESS REVIEW -- [Project Name]
+
+> Status: Baseline
+> Alignment: Aligned with the open-standard rewrite
+> Intended role: optional self-evolution review template
+> Use it for: turning repeated trace and verification evidence into reviewed
+> harness improvements
 
 ## Scope
 
-Steps reviewed:
-- Step X.Y
-- Step X.Z
+Period reviewed:
+- YYYY-MM-DD to YYYY-MM-DD
 
-Date:
-- YYYY-MM-DD
+Task cycles or records reviewed:
+- Task or trace 1
+- Task or trace 2
 
 Reviewer:
-- [Name / Agent / Team]
+- [Name / Role / Agent / Team]
 
 ---
 
-## 1. What worked well
+## 1. Evidence Reviewed
 
-Patterns that should be reinforced:
+Summarize the trace, verification, state, or history records consulted.
+
+- Evidence 1
+- Evidence 2
+- Evidence 3
+
+---
+
+## 2. What Held Up
+
+Patterns, assumptions, or harness structures that worked as intended:
 
 - Pattern 1
 - Pattern 2
@@ -24,9 +40,9 @@ Patterns that should be reinforced:
 
 ---
 
-## 2. Friction points
+## 3. Friction Or Failure
 
-Where execution slowed down or felt unclear:
+Where execution, verification, trace capture, or handoff became unclear:
 
 - Friction 1
 - Friction 2
@@ -34,129 +50,79 @@ Where execution slowed down or felt unclear:
 
 ---
 
-## 3. Repeated issues
+## 4. Repeated Signals
 
-Issues that appeared more than once:
+Issues or successes that appeared more than once:
 
-- Issue 1
-- Issue 2
-- Issue 3
-
----
-
-## 4. Misalignments
-
-Where reality differed from expectation:
-
-### Plan misalignment
-- Example
-
-### Step spec gaps
-- Example
-
-### Architectural tension
-- Example
-
-### Standards gap
-- Example
+- Signal 1
+- Signal 2
+- Signal 3
 
 ---
 
-## 5. Insights
+## 5. Boundary Check
 
-What was learned about:
+Identify whether each issue belongs in the standard, the baseline
+implementation, a domain implementation, or session state.
 
-### The system being built
-- Insight 1
-- Insight 2
-
-### The process itself
-- Insight 1
-- Insight 2
-
-### AI or review behavior
-- Insight 1
-- Insight 2
+| Signal | Best placement | Reason |
+|---|---|---|
+| [Signal] | [Standard / Baseline / Domain / State] | [Reason] |
 
 ---
 
-## 6. Promotion decisions
+## 6. Evolution Proposals
 
-Decide what should move upward.
+Proposed changes produced by this review:
 
-### Promote to `SYSTEM_MODEL.md`
-- [ ] Item 1
-- [ ] Item 2
+| Proposal | Target document or layer | Status |
+|---|---|---|
+| [Proposal] | [Document or layer] | Proposed |
 
-### Promote to `PLAN.md`
-- [ ] Item 1
-- [ ] Item 2
-
-### Promote to `CODING_STANDARDS.md`
-- [ ] Item 1
-- [ ] Item 2
-
-### Promote to `WORKFLOW_STANDARDS.md`
-- [ ] Item 1
-- [ ] Item 2
-
-### Promote to operating model or equivalent execution-governance document
-- [ ] Item 1
-- [ ] Item 2
-
-### Promote to templates
-- [ ] Item 1
-- [ ] Item 2
+Possible statuses:
+- Proposed
+- Accepted
+- Rejected
+- Deferred
+- Needs escalation
 
 ---
 
-## 7. Anti-pattern detection
+## 7. Adopted Changes
 
-Did any of the following occur?
-
-- [ ] Scope creep during steps
-- [ ] Hidden architectural changes
-- [ ] Skipping or weakening step spec discipline
-- [ ] Tests drifting from intended behavior
-- [ ] Over-engineering early steps
-- [ ] Duplicate logic introduced
-- [ ] Incorrect escalation handling
-
-If yes, describe:
-
-- Description 1
-- Description 2
-
----
-
-## 8. Adjustments made
-
-Explicit changes made as a result of this review:
+Changes accepted during this review:
 
 - Change 1
 - Change 2
 
----
-
-## 9. Forward guidance
-
-What should be done differently in the next steps?
-
-- Guideline 1
-- Guideline 2
-- Guideline 3
+For each accepted change, update the appropriate durable document.
+If the reason matters for future interpretation, record the rationale in
+`history/decisions/` or the local equivalent.
 
 ---
 
-## 10. Open questions
+## 8. Deferred Or Escalated Questions
 
-Questions that should be tracked but not resolved in this review:
+Questions that should remain visible but are not resolved here:
 
 - Question 1
 - Question 2
+
+Record unresolved current-work questions in session state.
+Record durable rationale only after a decision is made.
+
+---
+
+## 9. Next Review Focus
+
+What the next review should watch:
+
+- Focus 1
+- Focus 2
+- Focus 3
 
 ---
 
 ## Notes
 
-Optional reflections, risks, or context for the next review cycle.
+Optional context for future reviewers.

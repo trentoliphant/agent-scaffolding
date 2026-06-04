@@ -1,15 +1,29 @@
 # CODING STANDARDS
 
+> Status: Deferred baseline extension
+> Alignment: Compatible with the open-standard rewrite
+> Intended role: optional implementation-specific template for coding projects
+> Use it for: coding-focused implementations, not the smallest domain-neutral
+> baseline and not standard core
+
 ## Purpose
 
-This document defines coding and implementation standards for the project.
+This document defines coding and implementation standards for a software
+project.
 
 It governs how code should be written, organized, tested, and maintained.
 It does not define system architecture, project sequencing, or workflow
 governance.
 
 Architecture is defined in `SYSTEM_MODEL.md`.
-Process and execution rules are defined in the project's operating model or equivalent orchestration/workflow document.
+Task sequencing is defined in `PLAN.md`.
+Workflow and promotion rules are defined in `WORKFLOW_STANDARDS.md` or the
+project's equivalent orchestration document.
+
+Use this template only when the harness is being applied to software work or
+another code-producing domain.
+For non-coding domains, replace it with a domain-specific standards document
+that defines what good implementation looks like in that domain.
 
 ---
 
@@ -32,6 +46,9 @@ This document applies to:
 - Tests
 - Supporting implementation files
 - Language-specific coding patterns
+
+For non-software domains, replace this scope with the relevant production
+artifacts and quality expectations.
 
 This document does not define:
 
@@ -237,7 +254,7 @@ This document does not define:
 ### Required
 
 - Refactoring must preserve intended behavior unless a change is explicit
-- Refactoring must stay within step scope unless otherwise approved
+- Refactoring must stay within task scope unless otherwise approved
 
 ### Preferred
 
@@ -246,7 +263,7 @@ This document does not define:
 
 ### Avoid
 
-- Opportunistic refactors unrelated to the current step
+- Opportunistic refactors unrelated to the current task
 - Mixing major refactors with behavior changes without clear reason
 
 ---
@@ -392,7 +409,7 @@ Examples:
 
 These standards are the default.
 
-If a step or project requires deviation:
+If a task or project requires deviation:
 
 - keep the deviation intentional
 - keep it local if possible
@@ -419,6 +436,6 @@ This document does not define:
 
 - Architecture
 - Planning or sequencing
-- Step execution process
+- Task execution process
 - Commit / branch / git workflow conventions
 - Human approval rules
