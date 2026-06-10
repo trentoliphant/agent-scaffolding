@@ -224,6 +224,38 @@ A safe default pattern is:
 That pattern works across many systems because it treats the execution system
 as a host for the harness, not as the source of the harness's meaning.
 
+## Layering Trust: An Enforced Substrate Pattern
+
+A stronger integration pattern, proven in governed real-world usage (one
+origin project so far; see the incubating `harness-kit/` and decision
+`0017`), separates harness material into three layers by how each is
+trusted:
+
+| Layer | Holds | Trust mechanism |
+|---|---|---|
+| Meaning | invariants, authority, gates, escalation signals | human review of a text document |
+| Facts | state and history of governed work | an append-only record protected by version control |
+| Mechanical rules | checkable yes/no constraints | a deterministic validator |
+
+The value of the separation is that each layer is verified the way it is
+cheapest to verify. Humans review meaning, which changes rarely and through
+an explicit gate. Facts are never edited, only appended, so history stays
+trustworthy. Mechanical rules — legal state transitions, required fields,
+reviewer independence — are checked by a script rather than restated as
+prose nobody re-reads.
+
+Two consequences follow:
+
+- any state summary or dashboard is generated from the factual record,
+  never authored by hand
+- validation runs at every role handoff, so a corrupted record is caught at
+  the boundary where responsibility transfers
+
+This pattern is optional. A document-only harness is still a valid baseline.
+But if your project's risk justifies enforcement, prefer adding a thin
+deterministic substrate under the existing meaning layer over adding more
+prose rules to it.
+
 ## Practical Heuristic
 
 If you changed execution systems tomorrow, ask:
