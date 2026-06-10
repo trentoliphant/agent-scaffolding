@@ -1,0 +1,3 @@
+{"ts": "2026-06-10T09:00:00Z", "event": "phase", "actor": "facilitator", "session": "setup-1", "phase": "3", "action": "setup", "stable_branch": "main", "integration_branch": "phase/3-working"}
+{"ts": "2026-06-10T09:01:00Z", "event": "task_created", "actor": "planner", "session": "impl-A", "task": "3.6", "title": "Authoring-mode regression demo", "spec": "harness/tasks/3.6.md", "mode": "separate", "dep_level": "human-level", "contracts": []}
+{"ts": "2026-06-10T09:02:00Z", "event": "task_state", "actor": "implementer", "session": "impl-A", "task": "3.6", "state": "in_progress", "note": "WRONG: separate-mode spec authored by this same session — validator must catch."}

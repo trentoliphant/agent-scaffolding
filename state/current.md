@@ -121,6 +121,13 @@ The repository currently has:
 - a decision recorded to keep the current reference and migration set in this
   repository for now, including the local `starter_kit` copy as the
   authoritative in-repo reference source
+- `harness-kit/` registered as an incubating, evidence-backed executable
+  implementation source extracted from governed real-world usage, with
+  promotion deferred behind named triggers (`history/decisions/0017`)
+- a first usage-driven extraction pass completed: field-tested operating
+  practices captured in `docs/guide/harness-operating-practices.md` and a
+  layered-trust substrate pattern added to the execution-system integration
+  guide
 - AI-team templates explicitly kept as an advanced extension
 - experiment templates explicitly kept as a specialized extension
 - the current imported starter set explicitly treated as the default builder path
@@ -166,9 +173,12 @@ The main unresolved questions currently are:
 
 1. What repeated builder pressure, if any, would justify another promoted
    example, optional template, or guide extraction?
-2. Which future signals should cause the repository to move from narrative
+2. Should the baseline path eventually become executable rather than purely
+   document-based, and have the promotion triggers in
+   `history/decisions/0017` been met?
+3. Which future signals should cause the repository to move from narrative
    versioning to explicit releases or tags?
-3. Which future signals should cause the repository to revisit the one-repo
+4. Which future signals should cause the repository to revisit the one-repo
    boundary?
 
 ## Immediate Next Actions

@@ -29,7 +29,7 @@ These areas are the main source of truth for the current direction:
 | Path | Status | Notes |
 |---|---|---|
 | `docs/scaffolding/` | Current | Defines the current standard core |
-| current builder guide path in `docs/guide/` | Current | Includes `start-here.md`, `baseline-implementation.md`, `minimal-adoption.md`, `customizing.md`, `execution-system-integration.md`, `domain-implementation-extensions.md`, and this status guide |
+| current builder guide path in `docs/guide/` | Current | Includes `start-here.md`, `baseline-implementation.md`, `minimal-adoption.md`, `customizing.md`, `execution-system-integration.md`, `domain-implementation-extensions.md`, `harness-operating-practices.md`, and this status guide |
 | promoted example directories in `docs/examples/` | Current | Includes `minimal`, `software-project`, `research-to-design`, `regulated-approval`, and `expertise-tiered-review`; not every path under `docs/examples/` is current |
 | most of `templates/` | Current | Baseline implementation assets aligned around the current starting path, except explicitly transitional items listed below |
 | repository entry and governance documents | Current | Includes `README.md`, `AGENTS.md`, and `CONTRIBUTING.md` |
@@ -76,6 +76,7 @@ the current standard shape:
 |---|---|---|
 | `design_model/` | Incubating | Earlier design-oriented adapter material kept as an extraction source, not as a near-term promoted example |
 | `research_model/` | Incubating | Earlier research-oriented adapter material kept as an extraction source, not as a near-term promoted example |
+| `harness-kit/` | Incubating | Evidence-backed executable implementation extracted from governed real-world usage; an extraction source and possible future baseline, not yet promoted (see `history/decisions/0017`) |
 
 ## Co-Location Note
 

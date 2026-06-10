@@ -35,6 +35,9 @@ If you are a builder:
   [docs/guide/domain-implementation-extensions.md](docs/guide/domain-implementation-extensions.md)
   when you need domain-specific roles, verification, or overlays without
   redefining the shared standard
+- read
+  [docs/guide/harness-operating-practices.md](docs/guide/harness-operating-practices.md)
+  for field-tested operating practices once your harness is running
 - review [docs/examples/minimal/README.md](docs/examples/minimal/README.md)
   for a deliberately small example
 - review
@@ -185,7 +188,11 @@ inferring status from repository location alone.
 - `AGENTS.md` defines how agents should work in this repository
 - `CONTRIBUTING.md` defines how humans and agents should evolve the repository
 
-`design_model/` and `research_model/` remain at the repository root as
-incubating extraction sources from an earlier phase, not as current builder
-entry points. Use [docs/guide/repository-status.md](docs/guide/repository-status.md)
+`design_model/`, `research_model/`, and `harness-kit/` remain at the
+repository root as incubating extraction sources, not as current builder
+entry points. `harness-kit/` is distinct from the other two: it is an
+evidence-backed executable implementation extracted from governed real-world
+usage (see
+[history/decisions/0017](history/decisions/0017-harness-kit-is-adopted-as-an-incubating-executable-implementation-source.md)).
+Use [docs/guide/repository-status.md](docs/guide/repository-status.md)
 if you need to confirm their status.

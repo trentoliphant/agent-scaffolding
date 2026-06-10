@@ -1,0 +1,30 @@
+#!/usr/bin/env bash
+# Harness v2 pre-commit hook.
+# Enforces: (1) ledger.jsonl is append-only, (2) the staged ledger validates.
+# Install once per clone:  git config core.hooksPath harness/hooks
+set -euo pipefail
+
+root="$(git rev-parse --show-toplevel)"
+ledger="harness/ledger.jsonl"
+
+# 1. Append-only: a staged change to the ledger may only add lines.
+if git diff --cached --name-only | grep -qx "$ledger"; then
+  if git diff --cached -- "$ledger" | grep -Eq '^-([^-]|$)'; then
+    echo "pre-commit: BLOCKED — $ledger is append-only, but the staged" >&2
+    echo "change removes or edits existing lines. Correct a mistake by" >&2
+    echo "appending a corrective event instead (see harness/SCHEMA.md)." >&2
+    exit 1
+  fi
+fi
+
+# 2. Validate the staged (index) version of the ledger, falling back to the
+#    working-tree copy if the ledger is not yet tracked.
+tmp="$(mktemp)"
+trap 'rm -f "$tmp"' EXIT
+if ! git show ":$ledger" > "$tmp" 2>/dev/null; then
+  cp "$root/$ledger" "$tmp"
+fi
+if ! python3 "$root/harness/harness.py" validate "$tmp"; then
+  echo "pre-commit: BLOCKED — ledger validation failed (see findings above)." >&2
+  exit 1
+fi

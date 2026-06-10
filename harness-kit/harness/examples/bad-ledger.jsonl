@@ -1,0 +1,12 @@
+{"ts": "2026-06-10T09:00:00Z", "event": "phase", "actor": "facilitator", "session": "setup-1", "phase": "3", "action": "setup", "stable_branch": "main", "integration_branch": "phase/3-working"}
+{"ts": "2026-06-10T09:01:00Z", "event": "task_state", "actor": "implementer", "session": "impl-A", "task": "3.9", "state": "in_progress"}
+{"ts": "2026-06-10T09:02:00Z", "event": "task_created", "actor": "planner", "session": "setup-1", "task": "3.1", "title": "Bad demo task", "spec": "harness/tasks/3.1.md", "mode": "separate", "dep_level": "machine-level", "contracts": []}
+{"ts": "2026-06-10T09:03:00Z", "event": "task_state", "actor": "implementer", "session": "impl-A", "task": "3.1", "state": "in_progress"}
+{"ts": "2026-06-10T09:04:00Z", "event": "task_state", "actor": "implementer", "session": "impl-A", "task": "3.1", "state": "agent_review"}
+{"ts": "2026-06-10T09:05:00Z", "event": "verdict", "actor": "reviewer", "session": "impl-A", "task": "3.1", "verdict": "accepted", "review": "harness/reviews/3.1.md", "recommendation": "required", "deferred": [{"item": "hardening pass", "route": "new-task"}]}
+{"ts": "2026-06-10T09:06:00Z", "event": "task_state", "actor": "reviewer", "session": "impl-A", "task": "3.1", "state": "machine_complete"}
+{"ts": "2026-06-10T09:07:00Z", "event": "task_created", "actor": "planner", "session": "setup-1", "task": "3.2", "title": "Second task", "spec": "harness/tasks/3.2.md", "mode": "same-session-ok", "dep_level": "machine-level", "contracts": []}
+{"ts": "2026-06-10T09:08:00Z", "event": "task_state", "actor": "implementer", "session": "impl-B", "task": "3.2", "state": "in_progress"}
+{"ts": "2026-06-10T09:09:00Z", "event": "task_state", "actor": "approver", "session": "hum-T", "task": "3.1", "state": "done"}
+{"ts": "2026-06-10T09:10:00Z", "event": "decision", "actor": "maintainer", "session": "setup-1", "decision": "P-0099", "title": "Quiet process change", "level": "harness/process", "human_gate": false, "path": "harness/decisions/process/P-0099.md"}
+{"ts": "2026-06-10T09:11:00Z", "event": "audit", "actor": "auditor", "session": "impl-A", "tasks": ["3.1"], "findings": 0}
